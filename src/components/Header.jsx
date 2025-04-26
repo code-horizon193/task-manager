@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useAppContext } from '../context/contextAPI';
 import { BiBell, BiMoon, BiSearch, BiSun } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
@@ -10,8 +10,9 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const Header = () => {
     const { sideBar, setsideBar, theme, settheme } = useAppContext();
-
     const [isOpen, setisOpen] = useState(false);
+
+
 
     const toggleMenu = () => {
         setisOpen((prev) => !prev)
@@ -55,7 +56,7 @@ const Header = () => {
                     >
                         {theme === "light" ? <BiMoon /> : <BiSun />}
 
-                        <span className='absolute top-15 right-1/2 text-sm p-2 rounded-sm text-white select-none pointer-events-none bg-black whitespace-nowrap dark:bg-slate-300 dark:text-slate-900 font-semibold group-hover:top-13 transition-all duration-300 opacity-0 group-hover:opacity-100 capitalize font-ubuntu'>{theme} mood</span>
+                        <span className='absolute top-15 right-1/2 text-sm p-2 rounded-sm text-white select-none pointer-events-none bg-black whitespace-nowrap dark:bg-slate-300 dark:text-slate-900 font-semibold group-hover:top-13 transition-all duration-300 opacity-0 group-hover:opacity-100 capitalize font-ubuntu z-50'>{theme} mood</span>
                     </div>
                     <Link to='/profile' className='size-9 select-none' title='profile'>
                         <img src="public/users/user-13.jpg" alt="profile" className='size-full object-cover rounded-full object-center' />
@@ -70,21 +71,23 @@ const Header = () => {
 
                     <div className={`w-44 rounded-sm absolute ${isOpen ? "" : "hidden"} top-12 p-1 bg-slate-50 border-slate-300 dark:border-slate-600 border dark:bg-darkmode right-4 transition duration-200 z-40`}>
 
-                        <button className="flex w-full items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900" 
-                         onClick={toggleMenu}
+                        <button className="flex w-full items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900"
+                            onClick={toggleMenu}
                         >
                             <BiBell />
                             <span>notification</span>
                         </button>
 
-                        <button className="flex w-full items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900" 
-                          onClick={toggleMenu}
+                        <button className="flex w-full items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900"
+                            onClick={toggleMenu}
                         >
                             <MdOutlineEmail />
                             <span>message</span>
                         </button>
 
-                        <button className='flex w-full items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900' onClick={toggleMood}>
+                        <button className='flex w-full items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900'
+                            onClick={toggleMood}
+                        >
                             {theme === "light" ? <BiMoon /> : <BiSun />}
                             <span className="">
                                 {theme === "dark" ? "light" : "dark"} mood

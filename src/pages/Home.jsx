@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BsFolderFill } from 'react-icons/bs';
-import { tasks, notes } from '../data';
+import { projects, notes, tasks, activity } from '../data';
 import ProjectCard from '../components/projectCard';
 import NoteCard from '../components/NoteCard';
 import { GrNotes } from 'react-icons/gr';
+import { MdOutlineTaskAlt } from "react-icons/md";
+import { MdAccessTime } from "react-icons/md";
+import { CiStar } from "react-icons/ci";
 
 const Home = () => {
+  const [isChecked, setisChecked] = useState({});
+  const toggleCheck = (id) => {
+    setisChecked((prev) => ({
+      ...prev, [id]: !prev[id]
+    }))
+  }
   return (
-    <div className='relative screen-full overflow-x-hidden'>
-      <div className="flex w-full items-start gap-6 flex-col md:flex-row">
+    <div className='relative screen-full overflow-x-hidden px-2'>
+      <div className="flex w-full items-start gap-3 flex-col md:flex-row">
         <section className="md:flex-4 p-2 w-full">
 
           <div className="mb-5 border border-slate-300 rounded-lg bg-slate-50 p-2 shadow-md dark:bg-slate-900 dark:border-slate-700">
@@ -18,7 +27,7 @@ const Home = () => {
             </h2>
 
             <div className="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-3">
-              {tasks.map((task, index) => (
+              {projects.map((task, index) => (
                 <ProjectCard item={task} key={index} />
               ))}
             </div>
@@ -39,11 +48,80 @@ const Home = () => {
 
         </section>
         <section className="md:flex-2 p-2 w-full">
-          <div className="w-full flex gap-3 md:flex-col flex-row">
+          <div className="w-full flex gap-3 md:flex-col sm:flex-row flex-col">
 
-              <div className="">
-                
+            <div className="border w-full border-slate-300 rounded-lg bg-slate-50 p-2 shadow-md dark:bg-slate-900 dark:border-slate-700">
+
+              <h2 className='flex items-center gap-2 text-lg font-semibold font-ubuntu text-gray-700 dark:text-slate-200'>
+                <MdOutlineTaskAlt className='text-xl' />
+                <span>My tasks</span>
+              </h2>
+
+              <div className="grid gap-1 mt-3">
+                {tasks.map((item) => (
+                  <div
+                    key={item.id}
+                    className={`w-full flex items-center justify-between p-1.5 px-3 rounded-md cursor-pointer transition duration-200 hover:bg-blue-100 dark:hover:bg-blue-950 ${isChecked[item.id] ? "bg-purple-300 dark:bg-blue-900" : ""}`}
+                  >
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        name="task"
+                        id="task"
+                        checked={!!isChecked[item.id]}
+                        className='size-4 accent-purple-500'
+                        onChange={() => toggleCheck(item.id)}
+                      />
+                      <div className="ml-3">
+                        <p className="text-sm font-semibold font-ubuntu">{item.title}</p>
+                        <p className="text-xs text-slate-500">{item.duration}</p>
+                      </div>
+                    </div>
+                    <div>
+                      <button className='text-xl'>
+                        <CiStar />
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
+            </div>
+
+            <div className="border w-full border-slate-300 rounded-lg md:mt-5 bg-slate-50 p-2 shadow-md dark:bg-slate-900 dark:border-slate-700">
+
+              <h2 className='flex items-center gap-2 text-lg font-semibold font-ubuntu text-gray-700 dark:text-slate-200'>
+                <MdAccessTime className='text-xl' />
+                <span>Rcent activity</span>
+              </h2>
+
+              <div className="mt-3 grid gap-1">
+                {activity.map((user, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center justify-between hover:bg-slate-100 dark:hover:bg-slate-800 transition duration-200 py-1.5 px-3 rounded-md"
+                  >
+                    <div className="flex items-center">
+                      <img
+                        src={user.image}
+                        alt={user.user}
+                        className='size-9 object-cover rounded-full'
+                      />
+                      <div className="ml-2">
+                        <p className="text-base font-medium text-gray-600 dark:text-slate-100 capitalize font-ubuntu">
+                          {user.user}
+                        </p>
+                        <p className="text-sm text-gray-500">
+                          {user.position}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="text-xs font-semibold text-green-500">
+                      {user.time}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
           </div>
         </section>

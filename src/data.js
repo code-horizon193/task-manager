@@ -62,7 +62,7 @@ export const links = [
   },
 ];
 
-export const tasks = [
+export const projects = [
   {
     title: "Workshop planning and ideas",
     descripttion:
@@ -291,3 +291,64 @@ export const notes = [
     ],
   },
 ];
+
+export const tasks = [
+  {
+    id: 1,
+    title: "Work on the plan",
+    duration: "3 hours left",
+  },
+  {
+    id: 2,
+    title: "Collect feedback",
+    duration: "1 hours left",
+  },
+  {
+    id: 3,
+    title: "Analyse test result",
+    duration: "16 hours left",
+  },
+  {
+    id: 4,
+    title: "conclusion",
+    duration: "1 day left",
+  },
+  {
+    id: 5,
+    title: "Sort all ideas",
+    duration: "1 day left",
+  },
+];
+
+export const activity = [
+  {
+    user: "maya hayes" ,
+    time: "27th April, 2025" ,
+    position: "Design challenges" ,
+    image: "public/users/user-6.jpg"
+  } ,
+  {
+    user: "cassie melendez" ,
+    time: "27th April, 2025" ,
+    position: "Note B - Dribble strategy" ,
+    image: "public/users/user-7.jpg"
+  } ,
+  {
+    user: "ronny schultz" ,
+    time: "27th April, 2025" ,
+    position: "Note B - Dribble strategy" ,
+    image: "public/users/user-9.jpg"
+  } ,
+  {
+    user: "amanda finnegan" ,
+    time: "27th April, 2025" ,
+    position: "Meeting planning" ,
+    image: "public/users/user-8.jpg"
+  } ,
+  {
+    user: "roben houghton" ,
+    time: "27th April, 2025" ,
+    position: "Plans for future" ,
+    image: "public/users/user-10.jpg"
+  } ,
+]

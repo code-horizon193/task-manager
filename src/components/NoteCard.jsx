@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { FiMoreHorizontal } from "react-icons/fi";
 import { MdDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
@@ -8,6 +8,23 @@ const NoteCard = ({ item }) => {
     const [dropMenu, setdropMenu] = useState(false);
     const [expanded, setexpanded] = useState(true);
     const [expandedtitle, setexpandedtitle] = useState(true);
+    const menuRef = useRef(null);
+
+    useEffect(() => {
+        const handleOutClick = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setdropMenu(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleOutClick);
+
+        return () => {
+            document.removeEventListener("mousedown", handleOutClick)
+        }
+    }, []);
+
+
     const toggleMenu = () => {
         setdropMenu((prev) => !prev);
     };
@@ -32,7 +49,10 @@ const NoteCard = ({ item }) => {
                         <FiMoreHorizontal />
                     </button>
 
-                    <div className={`w-44 rounded-sm absolute ${dropMenu ? "" : "hidden"} top-7 p-1 bg-slate-50 border-slate-300 dark:border-slate-600 border dark:bg-darkmode right-5 transition duration-200 z-40`}>
+                    <div
+                        ref={menuRef}
+                        className={`w-44 rounded-sm absolute ${dropMenu ? "" : "hidden"} top-7 p-1 bg-slate-50 border-slate-300 dark:border-slate-600 border dark:bg-darkmode right-5 transition duration-200 z-40`}
+                    >
 
                         <button className="flex w-full font-semibold items-center gap-1.5 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900"
                             onClick={toggleMenu}
