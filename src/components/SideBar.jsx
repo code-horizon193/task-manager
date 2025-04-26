@@ -8,7 +8,7 @@ import { useAppContext } from '../context/contextAPI';
 const SideBar = () => {
     const activeLink = "bg-purple-500 text-white flex items-center rounded-sm font-ubuntu font-medium capitalize transition-all duration-200";
 
-    const normalLink = "text-gray-700 flex items-center rounded-sm font-ubuntu font-medium capitalize hover:bg-slate-100 text-slate-500 transition-all duration-200 dark:text-gray-200 dark:hover:bg-slate-900";
+    const normalLink = "text-gray-700 flex items-center rounded-sm font-ubuntu font-medium capitalize hover:bg-slate-100 text-slate-500 transition-all duration-200 dark:text-gray-200 dark:hover:bg-slate-800";
 
     const { sideBar, setsideBar } = useAppContext();
     const closeBar = () => {
@@ -61,7 +61,7 @@ const SideBar = () => {
 
                 <div className="pb-3 px-2">
                     <Link to='/profile'>
-                        <div className="flex items-center hover:bg-blue-200 p-1 rounded-lg transition duration-200 cursor-pointer">
+                        <div className="flex items-center dark:hover:bg-slate-800 p-1 rounded-lg transition duration-200 cursor-pointer hover:bg-blue-200">
                             <img src="public/users/user-13.jpg" alt="profile" className='size-10 object-center rounded-full' />
 
                             <div className="ml-2">
