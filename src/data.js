@@ -78,7 +78,7 @@ export const tasks = [
     comments: [
       {
         img: "public/users/user-1.jpg",
-        name: "Jan Song",
+        name: "Jana Semison",
         position: "photoshop",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
@@ -100,7 +100,7 @@ export const tasks = [
     statues: "compelete",
     priority: "Meduiem",
     tags: ["Task", "design", "explore"],
-    team: ["public/users/profile.jpg", "public/users/user-3.jpg"],
+    team: ["public/users/user-3.jpg", "public/users/user-4.jpg"],
     fileSize: "1.2MB",
     comments: [
       {
@@ -127,11 +127,11 @@ export const tasks = [
     statues: "On Track",
     priority: "Low",
     tags: ["User", "comments", "feedback"],
-    team: ["public/users/user-4.jpg"],
+    team: ["public/users/user-5.jpg"],
     fileSize: "1.0MB",
     comments: [
       {
-        img: "public/users/user-4.jpg",
+        img: "public/users/user-5.jpg",
         name: "Nick Woods",
         position: "customer serveces",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
@@ -148,11 +148,11 @@ export const tasks = [
     statues: "On Research",
     priority: "High",
     tags: ["research", "analsyis"],
-    team: ["public/users/user-4.jpg"],
+    team: ["public/users/user-18.jpg"],
     fileSize: "5.1MB",
     comments: [
       {
-        img: "public/users/user-4.jpg",
+        img: "public/users/user-18.jpg",
         name: "Wilson morety",
         position: "data scientest",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
@@ -170,26 +170,26 @@ export const tasks = [
     priority: "High",
     tags: ["research", "web", "design"],
     team: [
-      "public/users/profile.jpg",
-      "public/users/user-3.jpg",
-      "public/users/user-2.jpg",
+      "public/users/user-13.jpg",
+      "public/users/user-14.jpg",
+      "public/users/user-15.jpg",
     ],
     fileSize: "2.8MB",
     comments: [
       {
-        img: "public/users/profile.jpg",
-        name: "Sam Jonkey",
-        position: "designer",
-        Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
-      },
-      {
-        img: "public/users/user-2.jpg",
-        name: "Emma Stone",
+        img: "public/users/user-13.jpg",
+        name: "Robert Nelson",
         position: "devolper",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
       },
       {
-        img: "public/users/user-3.jpg",
+        img: "public/users/user-14.jpg",
+        name: "Emma Stone",
+        position: "designer",
+        Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
+      },
+      {
+        img: "public/users/user-15.jpg",
         name: "Steven Chockley",
         position: "devolper",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
@@ -206,11 +206,11 @@ export const tasks = [
     statues: "Compeleted",
     priority: "Meduiem",
     tags: ["managment"],
-    team: ["public/users/user-4.jpg"],
+    team: ["public/users/user-11.jpg"],
     fileSize: "10.8MB",
     comments: [
       {
-        img: "public/users/user-4.jpg",
+        img: "public/users/user-11.jpg",
         name: "Watson Svalone",
         position: "Manager",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
@@ -258,32 +258,36 @@ export const notes = [
     title: "How to conduct a user interview that could improve your product?",
     description:
       "You cannot understand good design if you do not understand people; design is made for people. User interviews are a tool that can help you...",
-      tags: [
-        { tagname: "Needs to be done", bg: "bg-stone-200", color: "text-stone-700" },
-        {
-          tagname: "Questions",
-          bg: "bg-orange-200",
-          color: "text-orange-700",
-        },
-      ],
+    tags: [
+      {
+        tagname: "Needs to be done",
+        bg: "bg-stone-200",
+        color: "text-stone-700",
+      },
+      {
+        tagname: "Questions",
+        bg: "bg-orange-200",
+        color: "text-orange-700",
+      },
+    ],
   },
   {
     date: "27th April, 2021",
     title: "Note B - Dribble strategy",
     description:
       "A plan focused on building a consistent design strategy, maintaining quality visuals, and boosting engagement on Dribbble platform.",
-      tags: [
-        { tagname: "Strategy", bg: "bg-amber-200", color: "text-amber-700" },
-        {
-          tagname: "Social media",
-          bg: "bg-cyan-200",
-          color: "text-cyan-700",
-        },
-        {
-          tagname: "Marketing",
-          bg: "bg-purple-200",
-          color: "text-purple-700",
-        },
-      ],
+    tags: [
+      { tagname: "Strategy", bg: "bg-amber-200", color: "text-amber-700" },
+      {
+        tagname: "Social media",
+        bg: "bg-cyan-200",
+        color: "text-cyan-700",
+      },
+      {
+        tagname: "Marketing",
+        bg: "bg-purple-200",
+        color: "text-purple-700",
+      },
+    ],
   },
 ];

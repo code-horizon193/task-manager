@@ -62,11 +62,11 @@ const SideBar = () => {
                 <div className="pb-3 px-2">
                     <Link to='/profile'>
                         <div className="flex items-center hover:bg-blue-200 p-1 rounded-lg transition duration-200 cursor-pointer">
-                            <img src="public/users/profile.jpg" alt="profile" className='size-10 object-center rounded-full' />
+                            <img src="public/users/user-13.jpg" alt="profile" className='size-10 object-center rounded-full' />
 
                             <div className="ml-2">
-                                <p className="text-black font-semibold dark:text-white">Tarek Fawzy</p>
-                                <p className="text-xs">tarek@example.com</p>
+                                <p className="text-black font-semibold dark:text-white">Robert Nelson</p>
+                                <p className="text-xs">rober-895@example.com</p>
                             </div>
                         </div></Link>
                 </div>

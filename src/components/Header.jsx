@@ -58,7 +58,7 @@ const Header = () => {
                         <span className='absolute top-15 right-1/2 text-sm p-2 rounded-sm text-white select-none pointer-events-none bg-black whitespace-nowrap dark:bg-slate-300 dark:text-slate-900 font-semibold group-hover:top-13 transition-all duration-300 opacity-0 group-hover:opacity-100 capitalize font-ubuntu'>{theme} mood</span>
                     </div>
                     <Link to='/profile' className='size-9 select-none' title='profile'>
-                        <img src="public/users/profile.jpg" alt="profile" className='size-full object-cover rounded-full object-center' />
+                        <img src="public/users/user-13.jpg" alt="profile" className='size-full object-cover rounded-full object-center' />
                     </Link>
                 </div>
 
