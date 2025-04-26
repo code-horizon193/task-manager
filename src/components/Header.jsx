@@ -13,12 +13,13 @@ const Header = () => {
 
     const [isOpen, setisOpen] = useState(false);
 
-    const openMenu = () => {
+    const toggleMenu = () => {
         setisOpen((prev) => !prev)
     }
 
     const toggleMood = () => {
         theme === "light" ? settheme("dark") : settheme("light");
+        toggleMenu();
     }
 
     const toggleSidebar = () => {
@@ -63,23 +64,27 @@ const Header = () => {
 
                 <div className="md:hidden relative flex items-center gap-1">
 
-                    <button className='text-xl size-9 grid place-items-center rounded-sm active:bg-slate-100 dark:active:bg-slate-800' onClick={openMenu}>
+                    <button className='text-xl size-9 grid place-items-center rounded-sm active:bg-slate-100 dark:active:bg-slate-800' onClick={toggleMenu}>
                         {isOpen ? <AiOutlineClose /> : <CiMenuKebab />}
                     </button>
 
-                    <div className={`w-44 rounded-sm absolute ${isOpen ? "" : "hidden"} top-12 p-1 bg-slate-50 border-slate-300 dark:border-slate-600 border dark:bg-darkmode right-4 transition duration-200`}>
+                    <div className={`w-44 rounded-sm absolute ${isOpen ? "" : "hidden"} top-12 p-1 bg-slate-50 border-slate-300 dark:border-slate-600 border dark:bg-darkmode right-4 transition duration-200 z-40`}>
 
-                        <div className="flex items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900">
+                        <button className="flex w-full items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900" 
+                         onClick={toggleMenu}
+                        >
                             <BiBell />
                             <span>notification</span>
-                        </div>
+                        </button>
 
-                        <div className="flex items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900">
+                        <button className="flex w-full items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900" 
+                          onClick={toggleMenu}
+                        >
                             <MdOutlineEmail />
                             <span>message</span>
-                        </div>
+                        </button>
 
-                        <button className='flex items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900' onClick={toggleMood}>
+                        <button className='flex w-full items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900' onClick={toggleMood}>
                             {theme === "light" ? <BiMoon /> : <BiSun />}
                             <span className="">
                                 {theme === "dark" ? "light" : "dark"} mood

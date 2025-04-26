@@ -37,10 +37,10 @@ const SideBar = () => {
                     <div className="mt-2">
                         {links.map((link) => (
                             <div className="px-2 my-1" key={link.title}>
-                                <p className="font-semibold text-gray-400 text-sm uppercase">{link.title}</p>
+                                <p className="font-semibold text-gray-400 text-sm uppercase py-1">{link.title}</p>
 
                                 {link.items.map((item) => (
-                                    <div className="mt-2" key={item.link}>
+                                    <div className="my-2" key={item.link}>
                                         <NavLink
                                             to={`/${item.link.toLowerCase()}`}
                                             className={({ isActive }) =>
