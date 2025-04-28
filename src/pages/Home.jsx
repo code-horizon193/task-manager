@@ -10,11 +10,38 @@ import { CiStar } from "react-icons/ci";
 
 const Home = () => {
   const [isChecked, setisChecked] = useState({});
+
   const toggleCheck = (id) => {
     setisChecked((prev) => ({
       ...prev, [id]: !prev[id]
     }))
-  }
+  };
+
+  const [cards, setCards] = useState(projects);
+  const [draggingCardId, setDraggingCardId] = useState(null);
+
+  const handleDragStart = (e, id) => {
+    setDraggingCardId(id);
+  };
+
+  const handleDragOver = (e, id) => {
+    e.preventDefault();
+    if (id === draggingCardId) return;
+
+    const draggingIndex = cards.findIndex(card => card.id === draggingCardId);
+    const overIndex = cards.findIndex(card => card.id === id);
+
+    const updatedCards = [...cards];
+    const [draggedCard] = updatedCards.splice(draggingIndex, 1);
+    updatedCards.splice(overIndex, 0, draggedCard);
+
+    setCards(updatedCards);
+  };
+
+  const handleDrop = () => {
+    setDraggingCardId(null);
+  };
+
   return (
     <div className='relative screen-full overflow-x-hidden px-2'>
       <div className="flex w-full items-start gap-3 flex-col md:flex-row">
@@ -27,8 +54,17 @@ const Home = () => {
             </h2>
 
             <div className="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-3">
-              {projects.map((task, index) => (
-                <ProjectCard item={task} key={index} />
+              {cards.map((task) => (
+                <div
+                  key={task.id}
+                  draggable
+                  onDragStart={(e) => handleDragStart(e, task.id)}
+                  onDragOver={(e) => handleDragOver(e, task.id)}
+                  onDrop={handleDrop}
+                  className={`active:cursor-grabbing shadow rounded-md cursor-grab ${draggingCardId === task.id ? "opacity-75 scale-95" : "opacity-100 scale-100"}`}
+                >
+                  <ProjectCard item={task} />
+                </div>
               ))}
             </div>
           </div>

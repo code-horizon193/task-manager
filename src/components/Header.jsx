@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { useAppContext } from '../context/contextAPI';
 import { BiBell, BiMoon, BiSearch, BiSun } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
@@ -11,8 +11,6 @@ import { AiOutlineClose } from "react-icons/ai";
 const Header = () => {
     const { sideBar, setsideBar, theme, settheme } = useAppContext();
     const [isOpen, setisOpen] = useState(false);
-
-
 
     const toggleMenu = () => {
         setisOpen((prev) => !prev)
@@ -65,7 +63,10 @@ const Header = () => {
 
                 <div className="md:hidden relative flex items-center gap-1">
 
-                    <button className='text-xl size-9 grid place-items-center rounded-sm active:bg-slate-100 dark:active:bg-slate-800' onClick={toggleMenu}>
+                    <button 
+                      className='text-xl size-9 grid place-items-center rounded-sm active:bg-slate-100 dark:active:bg-slate-800'
+                       onClick={toggleMenu}
+                      >
                         {isOpen ? <AiOutlineClose /> : <CiMenuKebab />}
                     </button>
 

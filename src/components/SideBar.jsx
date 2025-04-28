@@ -6,7 +6,7 @@ import { IoIosCloseCircle } from "react-icons/io";
 import { useAppContext } from '../context/contextAPI';
 
 const SideBar = () => {
-    const activeLink = "bg-purple-500 text-white flex items-center rounded-sm font-ubuntu font-medium capitalize transition-all duration-200";
+    const activeLink = "bg-black text-white flex items-center rounded-sm font-ubuntu font-medium capitalize transition-all duration-200 dark:bg-slate-50 dark:text-black";
 
     const normalLink = "text-gray-700 flex items-center rounded-sm font-ubuntu font-medium capitalize hover:bg-slate-100 text-slate-500 transition-all duration-200 dark:text-gray-200 dark:hover:bg-slate-800";
 

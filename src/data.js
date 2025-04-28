@@ -64,6 +64,7 @@ export const links = [
 
 export const projects = [
   {
+    id: 1,
     title: "Workshop planning and ideas",
     descripttion:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque dolorum possimus quia eveniet maiores id quod soluta vel sapiente magni cupiditate rerum commodi, eum eligendi nam eius quidem iure.",
@@ -91,6 +92,7 @@ export const projects = [
     ],
   },
   {
+    id: 2,
     title: "Design exploration",
     descripttion:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque dolorum possimus quia eveniet maiores id quod soluta vel sapiente magni cupiditate rerum commodi.",
@@ -118,6 +120,7 @@ export const projects = [
     ],
   },
   {
+    id: 3,
     title: "Users's feedback",
     descripttion:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque dolorum possimus quia eveniet.",
@@ -139,6 +142,7 @@ export const projects = [
     ],
   },
   {
+    id: 4,
     title: "Testing results",
     descripttion:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque dolorum possimus quia eveniet.",
@@ -160,6 +164,7 @@ export const projects = [
     ],
   },
   {
+    id: 5,
     title: "Web devolpment",
     descripttion:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque dolorum possimus quia eveniet.",
@@ -197,6 +202,7 @@ export const projects = [
     ],
   },
   {
+    id: 6,
     title: "Managment",
     descripttion:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque dolorum possimus quia eveniet.",
