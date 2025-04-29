@@ -7,6 +7,14 @@ import { FaNoteSticky } from "react-icons/fa6";
 import { GrTasks } from "react-icons/gr";
 import { IoSettingsSharp } from "react-icons/io5";
 import { FaUserGroup } from "react-icons/fa6";
+import { MdAllInbox } from "react-icons/md";
+import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { MdOutlineCall } from "react-icons/md";
+import { FiMessageSquare } from "react-icons/fi";
+import { FaRegBookmark } from "react-icons/fa";
+import { FaRegBell } from "react-icons/fa6";
+import { FaTags } from "react-icons/fa";
+import { IoMdStopwatch } from "react-icons/io";
 
 export const links = [
   {
@@ -328,33 +336,225 @@ export const tasks = [
 
 export const activity = [
   {
-    user: "maya hayes" ,
-    time: "27th April, 2025" ,
-    position: "Design challenges" ,
-    image: "public/users/user-6.jpg"
+    user: "maya hayes",
+    time: "27th April, 2025",
+    position: "Design challenges",
+    image: "public/users/user-6.jpg",
+  },
+  {
+    user: "cassie melendez",
+    time: "27th April, 2025",
+    position: "Note B - Dribble strategy",
+    image: "public/users/user-7.jpg",
+  },
+  {
+    user: "ronny schultz",
+    time: "27th April, 2025",
+    position: "Note B - Dribble strategy",
+    image: "public/users/user-9.jpg",
+  },
+  {
+    user: "amanda finnegan",
+    time: "27th April, 2025",
+    position: "Meeting planning",
+    image: "public/users/user-8.jpg",
+  },
+  {
+    user: "roben houghton",
+    time: "27th April, 2025",
+    position: "Plans for future",
+    image: "public/users/user-10.jpg",
+  },
+];
+
+export const statics = [
+  {
+    title: "Today works",
+    value: 19,
+    short: "Works",
+    bgColor: "bg-sky-500",
+  },
+  {
+    title: "Today tasks",
+    value: 12,
+    short: "Tasks",
+    bgColor: "bg-amber-500",
+  },
+  {
+    title: "Statistics",
+    value: 125,
+    short: "Statistics",
+    bgColor: "bg-stone-500",
+  },
+  {
+    title: "Analytics",
+    value: 315,
+    short: "Analytics",
+    bgColor: "bg-purple-500",
+  },
+];
+
+export const workReport = [
+  {
+    task: "Task 1",
+    data: [38, 35, 62, 41, 45, 57, 40, 55, 22, 95, 76, 88],
+  },
+  {
+    task: "Task 2",
+    data: [35, 25, 38, 40, 24, 48, 28, 55, 45, 60, 76, 80],
+  },
+  {
+    task: "Task 3",
+    data: [35, 30, 36, 28, 45, 58, 59, 19, 45, 70, 66, 59],
+  },
+];
+
+
+export const barTools = [
+  {
+    icon: MdAllInbox,
+    title: "inbox",
+    mes: 152,
+    color: "bg-green-600",
+  },
+  {
+    icon: MdOutlineCall,
+    title: "call",
+    mes: 15,
+    color: "bg-red-500",
+  },
+  {
+    icon: MdOutlineRemoveRedEye,
+    title: "profile visits",
+    mes: 865,
+    color: "bg-indigo-500",
+  },
+  {
+    icon: FiMessageSquare,
+    title: "messages",
+    mes: 22,
+    color: "bg-orange-500",
+  },
+  {
+    icon: FaRegBell,
+    title: "notification",
+    mes: 210,
+    color: "bg-sky-500",
+  },
+  {
+    icon: FaTags,
+    title: "new project",
+    mes: 11,
+    color: "bg-stone-500",
+  },
+  {
+    icon: IoMdStopwatch,
+    title: "time line",
+    mes: 75,
+    color: "bg-fuchsia-600",
+  },
+  {
+    icon: FaRegBookmark,
+    title: "marks",
+    mes: 100,
+    color: "bg-cyan-500",
+  },
+];
+
+export const myTeam = [
+  {
+    name: "James Hank",
+    image: "public/users/user-19.jpg",
+    position: "Team Leader",
+  },
+  {
+    name: "Parlock Hevlon",
+    image: "public/users/user-7.jpg",
+    position: "Devolper",
+  },
+  {
+    name: "Emaa Tom",
+    image: "public/users/user-17.jpg",
+    position: "UI UX Designer",
+  },
+  {
+    name: "Evala Gray",
+    image: "public/users/user-16.jpg",
+    position: "React Champ",
+  },
+  {
+    name: "Steven Stone",
+    image: "public/users/user-15.jpg",
+    position: "Sales Lead",
+  },
+];
+
+export const table = [
+  {
+    app: "Alpino 4.1" ,
+    team: [
+      "public/users/user-3.jpg" ,
+      "public/users/user-16.jpg" ,
+    ] ,
+    sales: "11,580" ,
+    price: "$80" ,
+    total: "$22.899" ,
+    state: "Good" ,
+    deatils: "WrapTheme To By Again",
+    color: "bg-green-500"
   } ,
   {
-    user: "cassie melendez" ,
-    time: "27th April, 2025" ,
-    position: "Note B - Dribble strategy" ,
-    image: "public/users/user-7.jpg"
+    app: "Nexos" ,
+    team: [
+      "public/users/user-7.jpg" ,
+      "public/users/user-13.jpg" ,
+      "public/users/user-18.jpg" ,
+    ] ,
+    sales: "18,000" ,
+    price: "$120" ,
+    total: "$570.899" ,
+    state: "Good" ,
+    deatils: "WrapTheme To By Again",
+    color: "bg-green-500"
   } ,
   {
-    user: "ronny schultz" ,
-    time: "27th April, 2025" ,
-    position: "Note B - Dribble strategy" ,
-    image: "public/users/user-9.jpg"
+    app: "Compass V3.4.1" ,
+    team: [
+      "public/users/user-14.jpg" ,
+      "public/users/user-2.jpg" ,
+      "public/users/user-4.jpg" ,
+    ] ,
+    sales: "10,799" ,
+    price: "$38" ,
+    total: "$150.899" ,
+    state: "Accept" ,
+    deatils: "WrapTheme To By Again",
+    color: "bg-blue-500"
   } ,
   {
-    user: "amanda finnegan" ,
-    time: "27th April, 2025" ,
-    position: "Meeting planning" ,
-    image: "public/users/user-8.jpg"
+    app: "Neterio" ,
+    team: [
+      "public/users/user-15.jpg" ,
+      "public/users/user-6.jpg" ,
+    ] ,
+    sales: "15,799" ,
+    price: "$99" ,
+    total: "$200.000" ,
+    state: "Bad" ,
+    deatils: "WrapTheme To By Again",
+    color: "bg-red-500"
   } ,
   {
-    user: "roben houghton" ,
-    time: "27th April, 2025" ,
-    position: "Plans for future" ,
-    image: "public/users/user-10.jpg"
+    app: "Csero 3.4" ,
+    team: [
+      "public/users/user-8.jpg" ,
+      "public/users/user-12.jpg" ,
+    ] ,
+    sales: "150,799" ,
+    price: "$59" ,
+    total: "$299.000" ,
+    state: "Good" ,
+    deatils: "WrapTheme To By Again",
+    color: "bg-green-500"
   } ,
 ]

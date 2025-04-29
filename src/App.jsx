@@ -19,11 +19,11 @@ function App() {
   const { sideBar } = useAppContext();
 
   return (
-    <div className="relative min-h-dvh overflow-x-hidden bg-white dark:bg-darkmode dark:text-white">
+    <div className="relative min-h-dvh overflow-x-hidden bg-white dark:bg-darkmode dark:text-white transition-all duration-300">
       <BrowserRouter>
         <div>
           <SideBar />
-          <main className={`ml-0 lg:ml-60 transition duration-200 relative`}>
+          <main className={`ml-0 lg:ml-60 transition-all duration-300 relative`}>
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />

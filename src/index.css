@@ -16,4 +16,9 @@ body {
   .blockoverflow::-webkit-scrollbar{
     display: none;
   }
+
+  .page{
+    @apply relative w-full overflow-x-hidden px-2
+  }
+
 }

@@ -18,14 +18,16 @@ const Header = () => {
 
     const toggleMood = () => {
         theme === "light" ? settheme("dark") : settheme("light");
-        toggleMenu();
+        if(isOpen){
+            toggleMenu();
+        }
     }
 
     const toggleSidebar = () => {
         setsideBar((prev) => !prev)
     }
     return (
-        <header className={`h-15 bg-white dark:bg-darkmode w-full border-b border-b-slate-200 dark:border-b-gray-800`}>
+        <header className={`h-15 bg-white dark:bg-darkmode w-full border-b border-b-slate-200 dark:border-b-gray-800 transition-all duration-300`}>
             <div className="size-full p-4 flex items-center justify-between">
                 <div className="flex items-center md:w-1/2 w-[70%]">
                     <div className="flex items-center gap-1 w-full md:w-sm border border-slate-300 rounded-lg dark:border-slate-700">

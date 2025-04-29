@@ -43,7 +43,7 @@ const Home = () => {
   };
 
   return (
-    <div className='relative screen-full overflow-x-hidden px-2'>
+    <div className='page'>
       <div className="flex w-full items-start gap-3 flex-col md:flex-row">
         <section className="md:flex-4 p-2 w-full">
 
