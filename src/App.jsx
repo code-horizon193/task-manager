@@ -4,12 +4,12 @@ import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import SideBar from './components/SideBar';
 import Analytics from './pages/analytics';
-import Reports from './pages/Reports';
 import Projects from './pages/Projects';
 import Tasks from './pages/Tasks';
 import Notes from './pages/Notes';
 import Team from './pages/Team';
 import Settings from './pages/Settings';
+import NotFound from './pages/NotFound';
 
 import { useAppContext } from './context/contextAPI';
 import Header from './components/Header';
@@ -30,13 +30,13 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/analytics" element={<Analytics />} />
-              <Route path="/reports" element={<Reports />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/tasks" element={<Tasks />} />
               <Route path="/notes" element={<Notes />} />
               <Route path="/team" element={<Team />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
         </div>

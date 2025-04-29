@@ -1,7 +1,6 @@
 import { FaHome } from "react-icons/fa";
 import { RiDashboardHorizontalFill } from "react-icons/ri";
 import { FaChartPie } from "react-icons/fa6";
-import { BsBarChartFill } from "react-icons/bs";
 import { FaFolderOpen } from "react-icons/fa";
 import { FaNoteSticky } from "react-icons/fa6";
 import { GrTasks } from "react-icons/gr";
@@ -36,10 +35,6 @@ export const links = [
       {
         link: "analytics",
         icon: FaChartPie,
-      },
-      {
-        link: "reports",
-        icon: BsBarChartFill,
       },
     ],
   },
