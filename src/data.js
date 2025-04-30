@@ -648,22 +648,3 @@ export const piedata = {
   data: [50, 30, 20],
   colors: ["#3D90D7", "#FFA955", "#8E1616"],
 };
-
-export const donatdata = {
-  labels: ["Project A", "Project B", "Project C"],
-  data: [120, 80, 60],
-  colors: ["#FFD63A", "#FFD0C7", "#EA7300"],
-};
-
-export const skills = {
-  labels: ["Speed", "Organization", "Completion", "Communication"],
-  data: [80, 70, 60, 69],
-  colors: ["#B5FCCD", "#8E7DBE", "#BBD8A3", "#E9A319"],
-};
-
-export const linebar = {
-  labels: ["January", "February", "March", "April", "May", "June"],
-  data: [32, 45, 60, 80, 95, 120],
-  label: "Completed Tasks",
-  color: "#fca512",
-};
