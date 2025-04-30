@@ -120,12 +120,12 @@ const Dashboard = () => {
               <table className='w-full mt-3'>
                 <thead className='dark:bg-neutral-800 bg-slate-200'>
                   <tr>
-                    <td className='font-bold uppercase p-1 px-2 text-slate-600 dark:text-slate-200'>application</td>
-                    <td className='font-bold uppercase p-1 px-2 text-slate-600 dark:text-slate-200'>sales</td>
-                    <td className='font-bold uppercase p-1 px-2 text-slate-600 dark:text-slate-200'>price</td>
-                    <td className='font-bold uppercase p-1 px-2 text-slate-600 dark:text-slate-200'>total</td>
-                    <td className='font-bold uppercase p-1 px-2 text-slate-600 dark:text-slate-200'>state</td>
-                    <td className='font-bold uppercase p-1 px-2 text-slate-600 dark:text-slate-200'>team</td>
+                    <td className='font-bold uppercase p-1 px-2 text-slate-600 dark:text-slate-200 text-sm sm:text-base'>application</td>
+                    <td className='font-bold uppercase p-1 px-2 text-slate-600 dark:text-slate-200 text-sm sm:text-base'>sales</td>
+                    <td className='font-bold uppercase p-1 px-2 text-slate-600 dark:text-slate-200 text-sm sm:text-base'>price</td>
+                    <td className='font-bold uppercase p-1 px-2 text-slate-600 dark:text-slate-200 text-sm sm:text-base'>total</td>
+                    <td className='font-bold uppercase p-1 px-2 text-slate-600 dark:text-slate-200 text-sm sm:text-base'>state</td>
+                    <td className='font-bold uppercase p-1 px-2 text-slate-600 dark:text-slate-200 text-sm sm:text-base'>team</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -136,14 +136,14 @@ const Dashboard = () => {
                     >
                       <td className='p-2 text-slate-700 dark:text-slate-200'>
                         <p className='font-semibold text-base'>{row.app}</p>
-                        <p className='text-sx text-slate-500'>{row.deatils}</p>
+                        <p className='text-sm text-slate-500'>{row.deatils}</p>
                       </td>
 
-                      <td className='p-2 font-semibold text-slate-700 dark:text-slate-200'>{row.sales}</td>
-                      <td className='p-2 font-semibold text-slate-700 dark:text-slate-200'>{row.price}</td>
-                      <td className='p-2 font-semibold text-slate-700 dark:text-slate-200'>{row.total}</td>
+                      <td className='p-2 font-semibold text-slate-700 dark:text-slate-200 text-sm sm:text-base'>{row.sales}</td>
+                      <td className='p-2 font-semibold text-slate-700 dark:text-slate-200 text-sm sm:text-base'>{row.price}</td>
+                      <td className='p-2 font-semibold text-slate-700 dark:text-slate-200 text-sm sm:text-base'>{row.total}</td>
                       <td className="p-2 text-center">
-                        <span className={`${row.color} px-2 py-0.5 rounded-full text-sm `}>
+                        <span className={`${row.color} text-white px-2.5 py-1 rounded-full text-sm `}>
                           {row.state}
                         </span>
                       </td>

@@ -404,7 +404,6 @@ export const workReport = [
   },
 ];
 
-
 export const barTools = [
   {
     icon: MdAllInbox,
@@ -486,70 +485,185 @@ export const myTeam = [
 
 export const table = [
   {
-    app: "Alpino 4.1" ,
-    team: [
-      "public/users/user-3.jpg" ,
-      "public/users/user-16.jpg" ,
-    ] ,
-    sales: "11,580" ,
-    price: "$80" ,
-    total: "$22.899" ,
-    state: "Good" ,
+    app: "Alpino 4.1",
+    team: ["public/users/user-3.jpg", "public/users/user-16.jpg"],
+    sales: "11,580",
+    price: "$80",
+    total: "$22.899",
+    state: "Good",
     deatils: "WrapTheme To By Again",
-    color: "bg-green-500"
-  } ,
+    color: "bg-green-500",
+  },
   {
-    app: "Nexos" ,
+    app: "Nexos",
     team: [
-      "public/users/user-7.jpg" ,
-      "public/users/user-13.jpg" ,
-      "public/users/user-18.jpg" ,
-    ] ,
-    sales: "18,000" ,
-    price: "$120" ,
-    total: "$570.899" ,
-    state: "Good" ,
+      "public/users/user-7.jpg",
+      "public/users/user-13.jpg",
+      "public/users/user-18.jpg",
+    ],
+    sales: "18,000",
+    price: "$120",
+    total: "$570.899",
+    state: "Good",
     deatils: "WrapTheme To By Again",
-    color: "bg-green-500"
-  } ,
+    color: "bg-green-500",
+  },
   {
-    app: "Compass V3.4.1" ,
+    app: "Compass V3.4.1",
     team: [
-      "public/users/user-14.jpg" ,
-      "public/users/user-2.jpg" ,
-      "public/users/user-4.jpg" ,
-    ] ,
-    sales: "10,799" ,
-    price: "$38" ,
-    total: "$150.899" ,
-    state: "Accept" ,
+      "public/users/user-14.jpg",
+      "public/users/user-2.jpg",
+      "public/users/user-4.jpg",
+    ],
+    sales: "10,799",
+    price: "$38",
+    total: "$150.899",
+    state: "Accept",
     deatils: "WrapTheme To By Again",
-    color: "bg-blue-500"
-  } ,
+    color: "bg-blue-500",
+  },
   {
-    app: "Neterio" ,
-    team: [
-      "public/users/user-15.jpg" ,
-      "public/users/user-6.jpg" ,
-    ] ,
-    sales: "15,799" ,
-    price: "$99" ,
-    total: "$200.000" ,
-    state: "Bad" ,
+    app: "Neterio",
+    team: ["public/users/user-15.jpg", "public/users/user-6.jpg"],
+    sales: "15,799",
+    price: "$99",
+    total: "$200.000",
+    state: "Bad",
     deatils: "WrapTheme To By Again",
-    color: "bg-red-500"
-  } ,
+    color: "bg-red-500",
+  },
   {
-    app: "Csero 3.4" ,
-    team: [
-      "public/users/user-8.jpg" ,
-      "public/users/user-12.jpg" ,
-    ] ,
-    sales: "150,799" ,
-    price: "$59" ,
-    total: "$299.000" ,
-    state: "Good" ,
+    app: "Csero 3.4",
+    team: ["public/users/user-8.jpg", "public/users/user-12.jpg"],
+    sales: "150,799",
+    price: "$59",
+    total: "$299.000",
+    state: "Good",
     deatils: "WrapTheme To By Again",
-    color: "bg-green-500"
-  } ,
-]
+    color: "bg-green-500",
+  },
+];
+
+export const teamMember = [
+  {
+    name: "Ethan Harris",
+    position: "Project Manager",
+    image: "public/users/user-11.jpg",
+    about: "Leads the team and ensures timely project delivery with quality.",
+  },
+  {
+    name: "Emily Stone",
+    position: "Frontend Developer",
+    image: "public/users/user-2.jpg",
+    about: "Builds responsive user interfaces with a focus on performance.",
+  },
+  {
+    name: "Daniel Kim",
+    position: "Backend Developer",
+    image: "public/users/user-3.jpg",
+    about: "Handles server-side logic and database integration.",
+  },
+  {
+    name: "James Carter",
+    position: "UI/UX Designer",
+    image: "public/users/user-4.jpg",
+    about: "Designs user-friendly interfaces and improves user experiences.",
+  },
+  {
+    name: "Michael Scott",
+    position: "QA Engineer",
+    image: "public/users/user-5.jpg",
+    about: "Tests features and ensures bug-free releases.",
+  },
+  {
+    name: "Olivia Davis",
+    position: "Business Analyst",
+    image: "public/users/user-6.jpg",
+    about: "Bridges communication between stakeholders and dev team.",
+  },
+  {
+    name: "Robert Brown",
+    position: "DevOps Engineer",
+    image: "public/users/user-7.jpg",
+    about: "Manages CI/CD pipelines and cloud infrastructure.",
+  },
+  {
+    name: "Isabella Garcia",
+    position: "Product Owner",
+    image: "public/users/user-8.jpg",
+    about: "Defines product vision and prioritizes feature backlog.",
+  },
+  {
+    name: "William Lee",
+    position: "Support Specialist",
+    image: "public/users/user-9.jpg",
+    about: "Helps clients with technical issues and feedback.",
+  },
+  {
+    name: "Ava Wilson",
+    position: "Scrum Master",
+    image: "public/users/user-10.jpg",
+    about: "Facilitates agile processes and removes team blockers.",
+  },
+  {
+    name: "Sophia Nguyen",
+    position: "Mobile Developer",
+    image: "public/users/user-1.jpg",
+    about: "Develops and maintains mobile applications for iOS and Android.",
+  },
+  {
+    name: "Mia Martinez",
+    position: "Content Strategist",
+    image: "public/users/user-12.jpg",
+    about: "Plans and manages content to support product goals.",
+  },
+  {
+    name: "Alexander Walker",
+    position: "Security Engineer",
+    image: "public/users/user-13.jpg",
+    about: "Ensures application security and monitors threats.",
+  },
+  {
+    name: "Charlotte Young",
+    position: "Marketing Lead",
+    image: "public/users/user-14.jpg",
+    about: "Leads marketing campaigns and engagement strategies.",
+  },
+  {
+    name: "Benjamin Allen",
+    position: "Data Analyst",
+    image: "public/users/user-15.jpg",
+    about: "Analyzes data to guide product and business decisions.",
+  },
+  {
+    name: "Amelia King",
+    position: "HR Coordinator",
+    image: "public/users/user-16.jpg",
+    about: "Supports HR processes and team coordination.",
+  },
+];
+
+export const piedata = {
+  labels: ["Completed", "In Progress", "Pending"],
+  data: [50, 30, 20],
+  colors: ["#3D90D7", "#FFA955", "#8E1616"],
+};
+
+export const donatdata = {
+  labels: ["Project A", "Project B", "Project C"],
+  data: [120, 80, 60],
+  colors: ["#FFD63A", "#FFD0C7", "#EA7300"],
+};
+
+export const skills = {
+  labels: ["Speed", "Organization", "Completion", "Communication"],
+  data: [80, 70, 60, 69],
+  colors: ["#B5FCCD", "#8E7DBE", "#BBD8A3", "#E9A319"],
+};
+
+export const linebar = {
+  labels: ["January", "February", "March", "April", "May", "June"],
+  data: [32, 45, 60, 80, 95, 120],
+  label: "Completed Tasks",
+  color: "#fca512",
+};
