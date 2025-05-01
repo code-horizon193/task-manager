@@ -81,7 +81,7 @@ const NoteCard = ({ item ,image }) => {
 
             {image && (
                 <div className="my-3">
-                    <div className="h-36 w-full overflow-hidden rounded-md relative before:absolute before:size-0 before:bg-orange-500 before:top-1/2 before:left-1/2 hover:before:size-full hover:before:left-0 hover:before:top-0 before:mix-blend-multiply before:opacity-50 transition-all duration-200 before:transition-all before:duration-300">
+                    <div className="h-44 w-full overflow-hidden rounded-md relative before:absolute before:size-0 before:bg-orange-500 before:top-1/2 before:left-1/2 hover:before:size-full hover:before:left-0 hover:before:top-0 before:mix-blend-multiply before:opacity-50 transition-all duration-200 before:transition-all before:duration-300">
                         <img 
                             src={item.image}
                             alt={item.title}
