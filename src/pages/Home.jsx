@@ -76,8 +76,12 @@ const Home = () => {
             </h2>
 
             <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
-              {notes.map((task, index) => (
-                <NoteCard item={task} key={index} />
+              {notes.slice(0, 4).map((task, index) => (
+                <NoteCard 
+                   item={task} 
+                   key={index} 
+                   image={false} 
+                />
               ))}
             </div>
           </div>

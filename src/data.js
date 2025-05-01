@@ -231,6 +231,7 @@ export const projects = [
 export const notes = [
   {
     date: "27th April, 2021",
+    image: "public/notes/note-1.jpg",
     title: "Plans for future and other directions, what needs to be done",
     description:
       "A Design Direction unifies everyone and adds meaning to web design. It’s a combination of art and...",
@@ -245,6 +246,7 @@ export const notes = [
   },
   {
     date: "27th April, 2021",
+    image: "public/notes/note-2.jpg",
     title: "Design & devolpment challenges",
     description:
       "What is a Design Challenge? Design challenges help boost creativity, create positive habits, and teach new methods for design thinking.",
@@ -264,6 +266,7 @@ export const notes = [
   },
   {
     date: "27th April, 2021",
+    image: "public/notes/note-3.jpg",
     title: "How to conduct a user interview that could improve your product?",
     description:
       "You cannot understand good design if you do not understand people; design is made for people. User interviews are a tool that can help you...",
@@ -282,6 +285,7 @@ export const notes = [
   },
   {
     date: "27th April, 2021",
+    image: "public/notes/note-4.jpg",
     title: "Note B - Dribble strategy",
     description:
       "A plan focused on building a consistent design strategy, maintaining quality visuals, and boosting engagement on Dribbble platform.",
@@ -296,6 +300,58 @@ export const notes = [
         tagname: "Marketing",
         bg: "bg-purple-200",
         color: "text-purple-700",
+      },
+    ],
+  },
+  {
+    date: "28th April, 2021",
+    image: "public/notes/note-5.jpg",
+    title: "Optimizing team workflow and productivity",
+    description:
+      "Identifying bottlenecks and streamlining daily operations to enhance overall productivity. Key focus on tooling, meetings, and prioritization.",
+    tags: [
+      { tagname: "Productivity", bg: "bg-teal-200", color: "text-teal-700" },
+      {
+        tagname: "Optimization",
+        bg: "bg-yellow-200",
+        color: "text-yellow-700",
+      },
+    ],
+  },
+  {
+    date: "28th April, 2021",
+    image: "public/notes/note-6.jpg",
+    title: "Creating a consistent brand identity",
+    description:
+      "A strong brand identity is key to user trust. This note outlines typography, color schemes, and tone of voice used across the product.",
+    tags: [
+      { tagname: "Branding", bg: "bg-pink-200", color: "text-pink-700" },
+      { tagname: "Visuals", bg: "bg-fuchsia-200", color: "text-fuchsia-700" },
+    ],
+  },
+  {
+    date: "28th April, 2021",
+    image: "public/notes/note-7.jpg",
+    title: "Frontend architecture planning",
+    description:
+      "Discusses strategies for scalable and maintainable frontend code, including folder structure, state management, and reusable components.",
+    tags: [
+      { tagname: "Architecture", bg: "bg-lime-200", color: "text-lime-700" },
+      { tagname: "Frontend", bg: "bg-rose-200", color: "text-rose-700" },
+    ],
+  },
+  {
+    date: "28th April, 2021",
+    image: "public/notes/note-8.jpg",
+    title: "Customer feedback loop improvement",
+    description:
+      "Establishing better systems to collect, analyze, and respond to customer feedback in a continuous product improvement cycle.",
+    tags: [
+      { tagname: "Feedback", bg: "bg-blue-200", color: "text-blue-700" },
+      {
+        tagname: "User Research",
+        bg: "bg-emerald-200",
+        color: "text-emerald-700",
       },
     ],
   },

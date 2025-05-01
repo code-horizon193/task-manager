@@ -4,7 +4,7 @@ import { MdDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineFavorite } from "react-icons/md";
 
-const NoteCard = ({ item }) => {
+const NoteCard = ({ item ,image }) => {
     const [dropMenu, setdropMenu] = useState(false);
     const [expanded, setexpanded] = useState(true);
     const [expandedtitle, setexpandedtitle] = useState(true);
@@ -79,16 +79,26 @@ const NoteCard = ({ item }) => {
                 </div>
             </div>
 
-            <h3 className={`my-1 text-lg font-semibold leading-6 ${expandedtitle ? "line-clamp-1" : ""} cursor-pointer text-gray-700 dark:text-gray-300`}
+            {image && (
+                <div className="my-3">
+                    <div className="h-36 w-full overflow-hidden rounded-md relative before:absolute before:size-0 before:bg-orange-500 before:top-1/2 before:left-1/2 hover:before:size-full hover:before:left-0 hover:before:top-0 before:mix-blend-multiply before:opacity-50 transition-all duration-200 before:transition-all before:duration-300">
+                        <img 
+                            src={item.image}
+                            alt={item.title}
+                            className='size-full object-cover object-center rounded-md'
+                        />
+                    </div>
+                </div>
+            )}
+
+            <h3 className={`my-1 text-lg font-semibold leading-6 ${expandedtitle ? "line-clamp-1" : ""} text-gray-700 dark:text-gray-300`}
                 onClick={expandTitle}
-                title={`${expandedtitle ? "click to open" : "click to close"}`}
             >
                 {item.title}
             </h3>
 
             <p className={`my-2 text-sm text-slate-500 ${expanded ? "line-clamp-2" : ""} cursor-pointer`}
                 onClick={expandText}
-                title={`${expanded ? "click to open" : "click to close"}`}
             >
                 {item.description}
             </p>
