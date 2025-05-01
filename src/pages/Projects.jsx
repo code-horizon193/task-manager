@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { projects } from '../data';
 
 const Projects = () => {
   return (
     <div>
-      Projects
+      Project
     </div>
   )
 }

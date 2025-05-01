@@ -53,8 +53,8 @@ const Home = () => {
               <span>My Projects</span>
             </h2>
 
-            <div className="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-3">
-              {cards.map((task) => (
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
+              {cards.slice(0 ,6).map((task) => (
                 <div
                   key={task.id}
                   draggable
@@ -77,10 +77,10 @@ const Home = () => {
 
             <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
               {notes.slice(0, 4).map((task, index) => (
-                <NoteCard 
-                   item={task} 
-                   key={index} 
-                   image={false} 
+                <NoteCard
+                  item={task}
+                  key={index}
+                  image={false}
                 />
               ))}
             </div>
