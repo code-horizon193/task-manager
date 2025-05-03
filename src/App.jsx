@@ -15,7 +15,6 @@ import Favorite from './pages/Favorite';
 
 function App() {
   const { sideBar } = useAppContext();
-
   return (
     <div className="relative min-h-dvh overflow-x-hidden bg-white dark:bg-darkmode dark:text-white transition-all duration-300">
       <BrowserRouter>
