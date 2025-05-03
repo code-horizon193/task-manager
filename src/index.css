@@ -25,3 +25,17 @@ body {
     @apply bg-orange-400 text-black;
   }
 }
+
+.animation{
+  animation: scale 0.5s ease-in-out;
+}
+
+@keyframes scale{
+  from{
+    transform: scale(45%);
+    opacity: 0;
+  } to{
+    transform: scale(100%);
+    opacity: 1;
+  }
+}

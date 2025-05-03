@@ -8,7 +8,7 @@ const Favorite = () => {
                     <img
                         src="public/error/no-result.svg"
                         alt="no data found"
-                        className='h-72 w-full mb-3'
+                        className='h-72 w-full mb-3 animation'
                     />
                     <h1 class="mb-3 text-5xl tracking-tight font-extrabold text-slate-700 dark:text-slate-100">
                         No Data Found
@@ -17,7 +17,7 @@ const Favorite = () => {
                         Sorry, We don't have any recent information <br />
                         about your notes at this moment.
                     </p>
-                    <button to='/home' class="inline-flex text-white bg-cyan-600 hover:bg-cyan-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center my-2">Back to Add notes</button>
+                    <button class="inline-flex text-white bg-orange-600 hover:bg-orange-800 focus:outline-none font-medium rounded-lg text-sm px-6 py-2.5 text-center my-2 cursor-pointer transition-all duration-200">Add Notes</button>
                 </div>
             </div>
         </div>
