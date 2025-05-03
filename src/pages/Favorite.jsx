@@ -8,13 +8,12 @@ const Favorite = () => {
                     <img
                         src="public/error/no-result.svg"
                         alt="no data found"
-                        className='h-72 w-full'
+                        className='h-72 w-full mb-3'
                     />
                     <h1 class="mb-3 text-5xl tracking-tight font-extrabold text-slate-700 dark:text-slate-100">
                         No Data Found
                     </h1>
                     <p class="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
-                        <b className='underline'>It's quite here...</b> <br />
                         Sorry, We don't have any recent information <br />
                         about your notes at this moment.
                     </p>
