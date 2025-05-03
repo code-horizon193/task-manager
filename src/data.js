@@ -1,9 +1,7 @@
 import { FaHome } from "react-icons/fa";
 import { RiDashboardHorizontalFill } from "react-icons/ri";
-import { FaChartPie } from "react-icons/fa6";
 import { FaFolderOpen } from "react-icons/fa";
 import { FaNoteSticky } from "react-icons/fa6";
-import { GrTasks } from "react-icons/gr";
 import { IoSettingsSharp } from "react-icons/io5";
 import { FaUserGroup } from "react-icons/fa6";
 import { MdAllInbox } from "react-icons/md";
@@ -14,6 +12,7 @@ import { FaRegBookmark } from "react-icons/fa";
 import { FaRegBell } from "react-icons/fa6";
 import { FaTags } from "react-icons/fa";
 import { IoMdStopwatch } from "react-icons/io";
+import { MdOutlineFavorite } from "react-icons/md";
 
 export const links = [
   {
@@ -23,18 +22,13 @@ export const links = [
         link: "home",
         icon: FaHome,
       },
-    ],
-  },
-  {
-    title: "analyze",
-    items: [
       {
         link: "dashboard",
         icon: RiDashboardHorizontalFill,
       },
       {
-        link: "analytics",
-        icon: FaChartPie,
+        link: "favorite",
+        icon: MdOutlineFavorite,
       },
     ],
   },
@@ -44,10 +38,6 @@ export const links = [
       {
         link: "projects",
         icon: FaFolderOpen,
-      },
-      {
-        link: "tasks",
-        icon: GrTasks,
       },
       {
         link: "notes",

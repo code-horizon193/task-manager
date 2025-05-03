@@ -3,6 +3,7 @@ import { FiMoreHorizontal } from "react-icons/fi";
 import { MdDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineFavorite } from "react-icons/md";
+import { VscPinnedDirty } from "react-icons/vsc";
 
 const NoteCard = ({ item ,image }) => {
     const [dropMenu, setdropMenu] = useState(false);
@@ -71,8 +72,15 @@ const NoteCard = ({ item ,image }) => {
                         <button className='flex w-full font-semibold items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900'
                             onClick={toggleMenu}
                         >
-                            <MdOutlineFavorite className='text-orange-500 text-lg' />
-                            <span className='text-sm whitespace-nowrap'>add to favourite</span>
+                            <MdOutlineFavorite className='text-amber-500 text-lg' />
+                            <span className='text-sm whitespace-nowrap'>favourite</span>
+                        </button>
+
+                        <button className='flex w-full font-semibold items-center gap-2 capitalize p-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-900'
+                            onClick={toggleMenu}
+                        >
+                            <VscPinnedDirty className='text-fuchsia-500 text-lg' />
+                            <span className='text-sm whitespace-nowrap'>pinned</span>
                         </button>
 
                     </div>
