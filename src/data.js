@@ -845,8 +845,40 @@ export const teamMember = [
   },
 ];
 
-export const piedata = {
-  labels: ["Completed", "In Progress", "Pending"],
-  data: [50, 30, 20],
-  colors: ["#3D90D7", "#FFA955", "#8E1616"],
-};
+export const pirorityData = [
+  ["Hight", "Medium", "Low"],
+  [50, 30, 20],
+  ["#4635B1", "#FCF259", "#E83F25"],
+];
+
+export const projectData = [25, 34, 30, 3, 66.8];
+
+export const tasksData = [35, 50, 25, 10, 70.8];
+
+export const activityData = [
+  [
+    "meetings",
+    "commits",
+    "issues closed",
+    "tasks_created",
+    "total activities",
+    "tasks_completed",
+  ],
+  [2, 15, 5, 7, 95, 50],
+  ["#f084d8", "#82ca9d", "#ffc658", "#ff4d4f", "#3D90D7", "#8ACCD5"],
+];
+
+export const timeLine = [
+  { year: 2014, projects: 3 },
+  { year: 2015, projects: 4 },
+  { year: 2016, projects: 4 },
+  { year: 2017, projects: 6 },
+  { year: 2018, projects: 9 },
+  { year: 2019, projects: 13 },
+  { year: 2020, projects: 18 },
+  { year: 2021, projects: 27 },
+  { year: 2022, projects: 28 },
+  { year: 2023, projects: 32 },
+  { year: 2024, projects: 34 },
+  { year: 2025, projects: 36 },
+];

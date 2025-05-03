@@ -72,7 +72,7 @@ const options = {
 const MultiLineChart = () => {
     return (
         <div className='p-2'>
-            <h3 className='text-gray-600 dark:text-slate-200 font-ubuntu text-lg'>
+            <h3 className='text-gray-600 dark:text-slate-200 font-ubuntu text-lg font-semibold'>
                 Wrok Report
             </h3>
             <div className="h-72 lg:h-96 mt-3">

@@ -17,7 +17,7 @@ const Favorite = () => {
                         Sorry, We don't have any recent information <br />
                         about your notes at this moment.
                     </p>
-                    <button class="inline-flex text-white bg-orange-600 hover:bg-orange-800 focus:outline-none font-medium rounded-lg text-sm px-6 py-2.5 text-center my-2 cursor-pointer transition-all duration-200">Add Notes</button>
+                    <button class="inline-flex text-white bg-orange-600 hover:bg-orange-800 focus:outline-none font-medium rounded-lg text-sm px-6 py-2.5 text-center my-2 cursor-pointer transition-all duration-200">Add Items</button>
                 </div>
             </div>
         </div>

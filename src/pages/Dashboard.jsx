@@ -1,7 +1,11 @@
 import React from 'react';
-import { statics, barTools, myTeam, table } from '../data';
+import { statics, barTools, myTeam, table, projectData, tasksData, activityData, timeLine, pirorityData } from '../data';
 import MultiLineChart from '../components/MultiLineChart';
 import { BiSearch } from 'react-icons/bi';
+import BarChart from '../components/BarChart';
+import PieChart from '../components/PieChart';
+import LineChart from '../components/LineChart';
+import DounghtChart from '../components/DounghtChart';
 
 const Dashboard = () => {
 
@@ -29,6 +33,36 @@ const Dashboard = () => {
         <div className="mt-5 w-full">
           <MultiLineChart />
         </div>
+
+        <div className="mt-5 w-full flex flex-col md:flex-row items-baseline gap-3.5">
+          <div className="w-full md:w-1/2">
+            <BarChart
+              visualData={[projectData, tasksData]}
+              labels={["total", "completed", "in progress", "on hold", "completion rate"]}
+              label1="Projects"
+              label2="Tasks"
+            />
+          </div>
+          <div className="w-full md:w-1/2">
+            <PieChart
+              mainLabel="Activity"
+              visualData={activityData}
+            />
+          </div>
+        </div>
+
+        <div className="w-full flex flex-col md:flex-row items-baseline gap-3.5">
+          <div className="w-full md:w-1/2">
+            <LineChart
+              vdata={timeLine}
+              mlabel="Projects timline"
+            />
+          </div>
+          <div className="w-full md:w-[45%]">
+            <DounghtChart vdata={pirorityData} />
+          </div>
+        </div>
+
 
         <section className="flex gap-4 flex-col md:flex-row mt-8 p-2">
           <div className="flex-1 rounded-md">
