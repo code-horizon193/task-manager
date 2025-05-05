@@ -10,6 +10,7 @@ import { FaListUl } from "react-icons/fa";
 import { BsGrid1X2Fill } from "react-icons/bs";
 import SearchBar from '../components/SearchBar';
 import { useAppContext } from '../context/contextAPI';
+import { FiMoreHorizontal } from "react-icons/fi";
 
 const Projects = () => {
   const [openPage, setopenPage] = useState("projects");
@@ -59,7 +60,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className='page'>
+    <div className='page relative'>
       <div className="p-3">
         <div className="flex items-center justify-between">
           <div className="text-start">
@@ -104,7 +105,7 @@ const Projects = () => {
             </button>
           </div>
         </div>
-        <div className="mt-3">
+        <div className="mt-3 border-b pb-2 border-b-slate-300 dark:border-b-slate-700">
           <div className="w-full flex items-center justify-between">
             <div className="flex items-center gap-1">
               {tabs.map((tab, idx) => (
@@ -130,22 +131,22 @@ const Projects = () => {
               </button>
             </div>
 
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 relative">
               <button
-                className='flex items-center gap-1.5 px-4 py-1 border transition-all duration-200 border-transparent hover:border-slate-300 dark:hover:border-slate-700 rounded-sm text-slate-500'
+                className='hidden sm:flex items-center gap-1.5 px-4 py-1 border transition-all duration-200 border-transparent hover:border-slate-300 dark:hover:border-slate-700 rounded-sm text-slate-500'
               >
                 <IoFilterOutline />
                 <span>Filter</span>
               </button>
               <button
-                className='flex items-center gap-0.5 px-2 py-1 border rounded-full text-slate-500 cursor-pointer hover:text-slate-600 dark:hover:text-slate-300'
+                className='hidden sm:flex items-center gap-0.5 px-2 py-1 border rounded-full text-slate-500 cursor-pointer hover:text-slate-600 dark:hover:text-slate-300'
                 onClick={openSearchBar}
               >
                 <IoSearchOutline />
                 <span className='text-xs'>Ctrl+K</span>
               </button>
               <button
-                className='flex items-center gap-1.5 px-4 py-1 border transition-all duration-200 border-transparent hover:border-slate-300 dark:hover:border-slate-700 rounded-sm text-slate-500'
+                className='hidden sm:flex items-center gap-1.5 px-4 py-1 border transition-all duration-200 border-transparent hover:border-slate-300 dark:hover:border-slate-700 rounded-sm text-slate-500'
               >
                 <FaSortAmountDown />
                 <span>Sort</span>
@@ -154,9 +155,9 @@ const Projects = () => {
           </div>
         </div>
 
-          {searchBar ? (
-            <SearchBar />
-          ): ("")}
+        {searchBar ? (
+          <SearchBar />
+        ) : ("")}
       </div>
     </div>
   )
