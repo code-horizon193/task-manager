@@ -16,7 +16,7 @@ const SideBar = () => {
     };
 
     return (
-        <div className={`fixed ${sideBar ? "lg:left-0 -left-full" : "lg:-left-full left-0"} top-0 w-60 h-dvh shadow-lg dark:shadow-slate-300/35 transition-all duration-300 bg-white dark:bg-darkmode z-50`}
+        <div className={`fixed ${sideBar ? "lg:left-0 -left-full" : "lg:-left-full left-0"} top-0 w-60 h-dvh blockoverflow  shadow-lg dark:shadow-slate-300/35 transition-all duration-300 bg-white dark:bg-darkmode z-50`}
         >
             <div className="size-full relative transition duration-200 flex flex-col justify-between">
                 <button className='text-red-500 text-3xl absolute -right-4 top-10 cursor-pointer lg:hidden' onClick={closeBar}>

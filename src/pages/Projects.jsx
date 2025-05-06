@@ -11,24 +11,23 @@ import { BsGrid1X2Fill } from "react-icons/bs";
 import SearchBar from '../components/SearchBar';
 import { useAppContext } from '../context/contextAPI';
 import { FiMoreHorizontal } from "react-icons/fi";
+import ProjectCard from '../components/ProjectCard'
 
 const Projects = () => {
+  const { searchBar, setsearchBar } = useAppContext();
   const [openPage, setopenPage] = useState("projects");
   const projectsTeam = funcs.getAllTeam(projects);
 
   // Get 5 Random Members from the main array
   const ranImg = funcs.randomImgs(4, projectsTeam);
 
-  const toggleProject = () => {
-    setopenPage("projects");
+  const openProjects = () => {
+    setopenPage("projects")
   };
-  const toggleTask = () => {
-    setopenPage("tasks");
+  const openTasks = () => {
+    setopenPage("tasks")
   };
-  const tabs = ["Projects", "Tasks"];
-
-  const { searchBar, setsearchBar } = useAppContext();
-
+  // ======================================
   const openSearchBar = () => {
     setsearchBar(true);
   };
@@ -58,6 +57,20 @@ const Projects = () => {
       window.removeEventListener("keyup", handleKeyUp);
     }
   }, []);
+
+  // ==========================================
+  const highPriority = projects.filter(i =>
+    i.priority.toLowerCase() === "high"
+  );
+
+  const medPriority = projects.filter(i =>
+    i.priority.toLowerCase() === "meduiem"
+  );
+
+  const lowPriority = projects.filter(i =>
+    i.priority.toLowerCase() === "low"
+  );
+
 
   return (
     <div className='page relative'>
@@ -108,15 +121,18 @@ const Projects = () => {
         <div className="mt-3 border-b pb-2 border-b-slate-300 dark:border-b-slate-700">
           <div className="w-full flex items-center justify-between">
             <div className="flex items-center gap-1">
-              {tabs.map((tab, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setopenPage(tab)}
-                  className={`px-4 py-1 border border-transparent transition-all duration-200 font-medium cursor-pointer text-slate-500 ${openPage === tab ? "bg-orange-500 text-white rounded-md border-orange-500 hover:text-orange-600 hover:bg-transparent hover:border-orange-500" : ""}`}
-                >
-                  {tab}
-                </button>
-              ))}
+              <button
+                onClick={openProjects}
+                className={`px-4 py-1 border border-transparent transition-all duration-200 font-medium cursor-pointer text-slate-500 ${openPage === "projects" ? "bg-orange-500 text-white rounded-md border-orange-500 hover:text-orange-600 hover:bg-transparent hover:border-orange-500" : ""}`}
+              >
+                Projects
+              </button>
+              <button
+                onClick={openTasks}
+                className={`px-4 py-1 border border-transparent transition-all duration-200 font-medium cursor-pointer text-slate-500 ${openPage === "tasks" ? "bg-orange-500 text-white rounded-md border-orange-500 hover:text-orange-600 hover:bg-transparent hover:border-orange-500" : ""}`}
+              >
+                Tasks
+              </button>
               <button
                 className='flex items-center gap-1.5 px-4 py-1 border transition-all duration-200 border-transparent hover:border-slate-300 dark:hover:border-slate-700 rounded-sm text-slate-500'
               >
@@ -141,9 +157,10 @@ const Projects = () => {
               <button
                 className='hidden sm:flex items-center gap-0.5 px-2 py-1 border rounded-full text-slate-500 cursor-pointer hover:text-slate-600 dark:hover:text-slate-300'
                 onClick={openSearchBar}
+                title='Ctrl+i to close'
               >
                 <IoSearchOutline />
-                <span className='text-xs'>Ctrl+K</span>
+                <span className='text-xs'>Ctrl+b</span>
               </button>
               <button
                 className='hidden sm:flex items-center gap-1.5 px-4 py-1 border transition-all duration-200 border-transparent hover:border-slate-300 dark:hover:border-slate-700 rounded-sm text-slate-500'
@@ -158,6 +175,66 @@ const Projects = () => {
         {searchBar ? (
           <SearchBar />
         ) : ("")}
+
+        <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 items-start">
+          <div className="p-3 bg-blue-50 dark:bg-blue-900/40 border rounded-md border-blue-200 dark:border-blue-900">
+            <div className="flex items-center justify-between px-3 py-1 bg-blue-400/30 dark:bg-blue-200 rounded-md">
+              <p className="text-blue-800 font-semibold font-ubuntu relative px-3 before:absolute before:size-2 before:rounded-full before:bg-blue-700 before:left-0 before:top-1/2 before:-translate-y-1/2">
+                High
+              </p>
+              <div className="text-blue-700 text-sm font-medium">
+                {highPriority.length}
+              </div>
+            </div>
+            <div className="mt-3 space-y-3">
+              {openPage === "projects" &&
+                (highPriority.map((i) =>
+                  <ProjectCard
+                    key={i.title}
+                    item={i}
+                  />
+                ))}
+            </div>
+          </div>
+          <div className="p-3 bg-green-50 dark:bg-green-900/40 border rounded-md border-green-200 dark:border-green-900">
+            <div className="flex items-center justify-between px-3 py-1 bg-green-400/30 dark:bg-green-200 rounded-md">
+              <p className="text-green-800 font-semibold font-ubuntu relative px-3 before:absolute before:size-2 before:rounded-full before:bg-green-700 before:left-0 before:top-1/2 before:-translate-y-1/2">
+                Medium
+              </p>
+              <div className="text-green-700 text-sm font-medium">
+                {medPriority.length}
+              </div>
+            </div>
+            <div className="mt-3 space-y-3">
+              {openPage === "projects" &&
+                (medPriority.map((i) =>
+                  <ProjectCard
+                    key={i.title}
+                    item={i}
+                  />
+                ))}
+            </div>
+          </div>
+          <div className="p-3 bg-red-50 dark:bg-red-900/40 border rounded-md border-red-200 dark:border-red-900">
+            <div className="flex items-center justify-between px-3 py-1 bg-red-400/30 dark:bg-red-200 rounded-md">
+              <p className="text-red-800 font-semibold font-ubuntu relative px-3 before:absolute before:size-2 before:rounded-full before:bg-red-700 before:left-0 before:top-1/2 before:-translate-y-1/2">
+                Low
+              </p>
+              <div className="text-red-700 text-sm font-medium">
+                {lowPriority.length}
+              </div>
+            </div>
+            <div className="mt-3 space-y-3">
+              {openPage === "projects" &&
+                (lowPriority.map((i) =>
+                  <ProjectCard
+                    key={i.title}
+                    item={i}
+                  />
+                ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
