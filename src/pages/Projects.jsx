@@ -18,7 +18,6 @@ const Projects = () => {
   const { searchBar, setsearchBar } = useAppContext();
   const [openPage, setopenPage] = useState("projects");
   const projectsTeam = funcs.getAllTeam(projects);
-  const [task, settask] = useState(null);
 
   // Get 5 Random Members from the main array
   const ranImg = funcs.randomImgs(4, projectsTeam);
@@ -59,29 +58,6 @@ const Projects = () => {
       window.removeEventListener("keyup", handleKeyUp);
     }
   }, []);
-
-  // ==========================================
-  const highPriority = (list) => {
-    const newList = list.filter(i =>
-      i.priority.toLowerCase() === "high"
-    );
-    return newList;
-  };
-
-  const medPriority = (list) => {
-    const newList = list.filter(i =>
-      i.priority.toLowerCase() === "medium"
-    );
-    return newList;
-  };
-
-  const lowPriority = (list) => {
-    const newList = list.filter(i =>
-      i.priority.toLowerCase() === "low"
-    );
-    return newList;
-  };
-  console.log(task)
 
   return (
     <div className='page relative'>
@@ -194,18 +170,18 @@ const Projects = () => {
                 High
               </p>
               <div className="text-blue-700 text-sm font-medium">
-                {openPage === "projects" ? highPriority(projects).length : highPriority(tasksList).length}
+                {openPage === "projects" ? funcs.highPriority(projects).length : funcs.highPriority(tasksList).length}
               </div>
             </div>
             <div className="mt-3 space-y-3">
               {openPage === "projects" ?
-                (highPriority(projects).map((i) =>
+                (funcs.highPriority(projects).map((i) =>
                   <ProjectCard
                     key={i.title}
                     item={i}
                   />
                 )) : (
-                  highPriority(tasksList).map((i) =>
+                  funcs.highPriority(tasksList).map((i) =>
                     <TaskCard
                       key={i.title}
                       task={i}
@@ -221,18 +197,18 @@ const Projects = () => {
                 Medium
               </p>
               <div className="text-green-700 text-sm font-medium">
-                {openPage === "projects" ? medPriority(projects).length : medPriority(tasksList).length}
+                {openPage === "projects" ? funcs.medPriority(projects).length : funcs.medPriority(tasksList).length}
               </div>
             </div>
             <div className="mt-3 space-y-3">
               {openPage === "projects" ?
-                (medPriority(projects).map((i) =>
+                (funcs.medPriority(projects).map((i) =>
                   <ProjectCard
                     key={i.title}
                     item={i}
                   />
                 )) : (
-                  medPriority(tasksList).map((i) =>
+                  funcs.medPriority(tasksList).map((i) =>
                     <TaskCard
                       key={i.title}
                       task={i}
@@ -248,18 +224,18 @@ const Projects = () => {
                 Low
               </p>
               <div className="text-red-700 text-sm font-medium">
-                {openPage === "projects" ? lowPriority(projects).length : lowPriority(tasksList).length}
+                {openPage === "projects" ? funcs.lowPriority(projects).length : funcs.lowPriority(tasksList).length}
               </div>
             </div>
             <div className="mt-3 space-y-3">
               {openPage === "projects" ?
-                (lowPriority(projects).map((i) =>
+                (funcs.lowPriority(projects).map((i) =>
                   <ProjectCard
                     key={i.title}
                     item={i}
                   />
                 )) : (
-                  lowPriority(tasksList).map((i) =>
+                  funcs.lowPriority(tasksList).map((i) =>
                     <TaskCard
                       key={i.title}
                       task={i}
