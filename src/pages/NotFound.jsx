@@ -9,7 +9,7 @@ const NotFound = () => {
                     <img 
                        src="public/error/error.svg" 
                        alt="error not found"
-                       className='h-72 w-full'
+                       className='h-56 w-full'
                     />
                     <h1 class="mb-3 text-7xl tracking-tight font-extrabold lg:text-9xl text-slate-700 dark:text-slate-100">404</h1>
                     <p class="mb-3 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white">Something's missing.</p>
