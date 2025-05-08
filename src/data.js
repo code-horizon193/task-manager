@@ -1592,3 +1592,84 @@ export const tasksList = [
     ],
   },
 ];
+
+export const profileInfo = [
+  {
+    title: "Addrees",
+    data: "795 Folsom Ave, Suite 600 San Francisco, 94107",
+  },
+  {
+    title: "Email address",
+    data: "rober-895@example.com",
+  },
+  {
+    title: "Mobile",
+    data: "+ 202-555-2828",
+  },
+  {
+    title: "Birth Date",
+    data: "October 22th, 1990",
+  },
+];
+
+export const checkboxItem = [
+  {
+    title: "Report Panel Usag",
+    connectId: "report",
+  },
+  {
+    title: "Email Redirect",
+    connectId: "email",
+  },
+  {
+    title: "Notifications",
+    connectId: "notifications",
+  },
+  {
+    title: "Auto Updates",
+    connectId: "auto-Updates",
+  },
+  {
+    title: "Offline",
+    connectId: "offline",
+  },
+  {
+    title: "Location Permission",
+    connectId: "location",
+  },
+];
+
+export const colors = [
+  {
+    color: "#3eacff",
+    cName: "Blue",
+  },
+  {
+    color: "#49c5b6",
+    cName: "Cyan",
+  },
+  {
+    color: "#a27ce6",
+    cName: "Purple",
+  },
+  {
+    color: "#ffce4b",
+    cName: "Orange",
+  },
+  {
+    color: "#50d38a",
+    cName: "Green",
+  },
+  {
+    color: "#e47297",
+    cName: "Blush",
+  },
+];
+
+export const myfavouriteMess = [
+  "Weekly account summary",
+  "Tips for campaign setup, growth and client success stories",
+  "Campaign reports",
+  "Promotional news such as offers or discounts",
+  "Devolpe new Features / Projects and any thing is exiting",
+];
