@@ -60,7 +60,7 @@ const SideBar = () => {
                 </div>
 
                 <div className="pb-3 px-2">
-                    <Link to='/profile'>
+                    <Link to='/settings'>
                         <div className="flex items-center dark:hover:bg-slate-800 p-1 rounded-lg transition duration-200 cursor-pointer hover:bg-blue-200">
                             <img src="public/users/user-13.jpg" alt="profile" className='size-10 object-center rounded-full' />
 
