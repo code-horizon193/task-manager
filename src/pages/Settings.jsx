@@ -3,27 +3,31 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa";
 
 import { checkboxItem, profileInfo, colors, myfavouriteMess } from '../data';
 import { CiEdit } from "react-icons/ci";
+import { useAppContext } from '../context/contextAPI';
 
 const Settings = () => {
-  const [isGrid, setisGrid] = useState(true);
+  const { isGrid, setisGrid, currentColor, setcurrentColor } = useAppContext();
+
   const inputRef = useRef(null);
   const openimgMenu = () => {
     inputRef.current.click();
   }
 
-  const [currentColor, setcurrentColor] = useState(null);
-  const newColor = (item) => {
-    setcurrentColor(item);
+  const newColor = (color) => {
+    setcurrentColor(color);
   }
 
   return (
     <div className='page'>
       <div className="p-2 mt-1">
         <div className="mb-4">
-          <h3 className='text-2xl font-thin text-orange-600'>
+          <h3 className='text-2xl font-thin text-orange-600'
+            style={{ color: currentColor }}
+          >
             Welcome back, Robert!
           </h3>
           <p className="text-sm text-slate-400 dark:text-slate-500">
@@ -196,7 +200,7 @@ const Settings = () => {
                 </div>
 
                 <div className="flex items-center gap-3 mt-4 px-2">
-                  <button className='px-6 w-full py-1 bg-orange-500 text-white rounded-md text-base transition-all duration-200 active:bg-orange-700 hover:bg-orange-600 cursor-pointer'>
+                  <button className='px-6 w-full py-1 bg-orange-500 text-white rounded-md text-base transition-all duration-200 active:opacity-90 hover:bg-orange-600 cursor-pointer' style={{ background: currentColor }}>
                     Save
                   </button>
                   <button className='px-6 w-full py-1 bg-white dark:bg-darkmode text-slate-700 dark:text-slate-200 rounded-md text-base transition-all duration-200  cursor-pointer border border-slate-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-900'>
@@ -240,7 +244,7 @@ const Settings = () => {
             <p className="font-ubuntu text-sm my-2 ml-1">
               Minimum 8 characters
             </p>
-            <button className='mt-3 w-full sm:w-fit font-ubuntu px-5 py-1 bg-orange-500 rounded-md text-white hover:bg-orange-600 cursor-pointer transition-all duration-200'>
+            <button className='mt-3 w-full sm:w-fit font-ubuntu px-5 py-1 bg-orange-500 rounded-md text-white hover:opacity-90 cursor-pointer transition-all duration-200' style={{ background: currentColor }}>
               save change
             </button>
           </div>
@@ -256,7 +260,7 @@ const Settings = () => {
 
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <div>
-                <p className="mb-2 font-medium text-orange-500">
+                <p className="mb-2 font-medium text-orange-500" style={{ color: currentColor }}>
                   Custom Settings
                 </p>
                 <ul>
@@ -283,7 +287,7 @@ const Settings = () => {
               </div>
 
               <div>
-                <p className="mb-2 font-medium text-orange-500">
+                <p className="mb-2 font-medium text-orange-500" style={{ color: currentColor }}>
                   I'd like to receive the following emails:
                 </p>
 
@@ -312,7 +316,7 @@ const Settings = () => {
             </div>
 
             <div className="mt-5">
-              <p className="mb-2 font-medium text-orange-500">
+              <p className="mb-2 font-medium text-orange-500" style={{ color: currentColor }}>
                 Custom Your Colors
               </p>
               <div className="flex flex-row gap-0.5 flex-wrap">
@@ -323,9 +327,11 @@ const Settings = () => {
                     onClick={() => newColor(color.color)}
                   >
                     <span
-                      className="w-5 h-5 rounded-sm"
+                      className="size-6.5 rounded-full grid place-items-center"
                       style={{ background: color.color }}
-                    />
+                    >
+                      <FaCheck className={`text-sm ${currentColor === color.color ? "inline-block" : "hidden"} text-white`} />
+                    </span>
                     <span className='text-base text-slate-700 dark:text-slate-200 font-ubuntu'>{color.cName}</span>
                   </button>
                 ))}
@@ -333,7 +339,7 @@ const Settings = () => {
             </div>
 
             <div className="mt-6">
-              <p className="mb-2 font-medium text-orange-500">
+              <p className="mb-2 font-medium text-orange-500" style={{ color: currentColor }}>
                 Custom Projects / Tasks View
               </p>
 

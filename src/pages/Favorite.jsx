@@ -1,6 +1,8 @@
 import React from 'react'
+import { useAppContext } from '../context/contextAPI';
 
 const Favorite = () => {
+    const { currentColor } = useAppContext();
     return (
         <div class="h-dvh w-full flex items-center justify-center">
             <div class="py-5 px-4 mx-auto max-w-screen-xl lg:py-10 lg:px-6">
@@ -17,7 +19,9 @@ const Favorite = () => {
                         Sorry, We don't have any recent information <br />
                         about your notes at this moment.
                     </p>
-                    <button class="inline-flex text-white bg-orange-600 hover:bg-orange-800 focus:outline-none font-medium rounded-lg text-sm px-6 py-2.5 text-center my-2 cursor-pointer transition-all duration-200">Add Items</button>
+                    <button class="inline-flex text-white bg-orange-600 hover:bg-orange-800 focus:outline-none font-medium rounded-lg text-sm px-6 py-2.5 text-center my-2 cursor-pointer transition-all duration-200" style={{background: currentColor}}>
+                        Add Items
+                    </button>
                 </div>
             </div>
         </div>

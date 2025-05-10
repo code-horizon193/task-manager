@@ -7,10 +7,11 @@ import { GrNotes } from 'react-icons/gr';
 import { MdOutlineTaskAlt } from "react-icons/md";
 import { MdAccessTime } from "react-icons/md";
 import { CiStar } from "react-icons/ci";
+import { useAppContext } from '../context/contextAPI';
 
 const Home = () => {
   const [isChecked, setisChecked] = useState({});
-
+  const { currentColor } = useAppContext();
   const toggleCheck = (id) => {
     setisChecked((prev) => ({
       ...prev, [id]: !prev[id]
@@ -54,7 +55,7 @@ const Home = () => {
             </h2>
 
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
-              {cards.slice(0 ,6).map((task) => (
+              {cards.slice(0, 6).map((task) => (
                 <div
                   key={task.id}
                   draggable
@@ -101,7 +102,12 @@ const Home = () => {
                 {tasks.map((item) => (
                   <div
                     key={item.id}
-                    className={`w-full flex items-center justify-between p-1.5 px-3 rounded-md cursor-pointer transition duration-200 hover:bg-blue-100 dark:hover:bg-blue-950 ${isChecked[item.id] ? "bg-purple-300 dark:bg-blue-900" : ""}`}
+                    className={`w-full flex items-center justify-between p-1.5 px-3 rounded-md cursor-pointer transition duration-200 hover:bg-slate-200 dark:hover:bg-slate-950 ${isChecked[item.id] ? "bg-purple-300 dark:bg-blue-900 rounded-none" : ""}` 
+                    }
+
+                    style={{
+                      background: isChecked[item.id] ? currentColor+"48" : ""
+                    }}
                   >
                     <div className="flex items-center">
                       <input
@@ -109,7 +115,7 @@ const Home = () => {
                         name="task"
                         id="task"
                         checked={!!isChecked[item.id]}
-                        className='size-4 accent-purple-500'
+                        className='size-4 accent-orange-500'
                         onChange={() => toggleCheck(item.id)}
                       />
                       <div className="ml-3">
@@ -155,7 +161,7 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="text-xs font-semibold text-green-500">
+                    <div className="text-xs font-semibold text-green-500" style={{ color: currentColor }}>
                       {user.time}
                     </div>
                   </div>

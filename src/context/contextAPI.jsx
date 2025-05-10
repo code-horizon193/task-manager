@@ -6,6 +6,8 @@ export const ContextProvider = ({ children }) => {
   const [sideBar, setsideBar] = useState(true);
   const [theme, settheme] = useState(localStorage.getItem("theme") || "light");
   const [searchBar, setsearchBar] = useState(false);
+  const [isGrid, setisGrid] = useState(true);
+  const [currentColor, setcurrentColor] = useState(null);
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -20,7 +22,7 @@ export const ContextProvider = ({ children }) => {
   }, [theme])
 
   return (
-    <StateContext.Provider value={{ sideBar, setsideBar, theme, settheme ,searchBar ,setsearchBar}}>
+    <StateContext.Provider value={{ sideBar, setsideBar, theme, settheme ,searchBar ,setsearchBar ,isGrid ,setisGrid ,currentColor ,setcurrentColor}}>
       {children}
     </StateContext.Provider>
   );

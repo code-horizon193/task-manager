@@ -1,7 +1,9 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import { BsFacebook, BsLinkedin, BsTwitterX } from 'react-icons/bs';
+import { useAppContext } from '../context/contextAPI';
 
 const TeamCard = ({ name, image, about, position }) => {
+    const { currentColor } = useAppContext();
     return (
         <div className='p-3 rounded-lg bg-slate-50/20 dark:bg-darkmode border border-slate-300 dark:border-slate-600 transition-all duration-200 shadow-md shadow-blue-300/20 hover:shadow-sm'>
             <div>
@@ -10,12 +12,12 @@ const TeamCard = ({ name, image, about, position }) => {
                         <img
                             src={image}
                             alt={name}
-                            className='size-full rounded-full object-cover'
+                            className='size-full rounded-full object-cover aspect-square'
                         />
                     </div>
                     <div className="ml-3.5">
                         <p className="font-bold text-slate-600 dark:text-slate-300 capitalize text-lg">{name}</p>
-                        <div className="text-sm text-orange-500">     {position}
+                        <div className="text-sm text-orange-500" style={{ color: currentColor }}>     {position}
                         </div>
                     </div>
                 </div>

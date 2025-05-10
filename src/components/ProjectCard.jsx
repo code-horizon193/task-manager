@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { useAppContext } from '../context/contextAPI';
 
 const ProjectCard = ({ item }) => {
+    const { currentColor } = useAppContext();
     let color;
     switch (item.priority) {
         case "Low":
@@ -42,7 +44,7 @@ const ProjectCard = ({ item }) => {
                             key={idx}
                             src={item}
                             alt="team member"
-                            className='size-9 rounded-full object-cover not-first:-ml-3 border-slate-700 border-2 dark:border-slate-200'
+                            className='size-9 rounded-full object-cover not-first:-ml-3 border-slate-700 border-2 dark:border-slate-200' style={{borderColor: currentColor}}
                         />
                     ))}
                 </div>

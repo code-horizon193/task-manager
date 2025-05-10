@@ -6,8 +6,10 @@ import BarChart from '../components/BarChart';
 import PieChart from '../components/PieChart';
 import LineChart from '../components/LineChart';
 import DounghtChart from '../components/DounghtChart';
+import { useAppContext } from '../context/contextAPI';
 
 const Dashboard = () => {
+  const { currentColor } = useAppContext();
 
   return (
     <div className='page'>
@@ -112,7 +114,7 @@ const Dashboard = () => {
                       {member.name}
                     </p>
 
-                    <p className="text-xs text-purple-500 -mt-0.5">
+                    <p className="text-xs text-purple-500 -mt-0.5" style={{color: currentColor}}>
                       {member.position}
                     </p>
                   </div>

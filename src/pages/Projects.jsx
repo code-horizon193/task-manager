@@ -15,7 +15,7 @@ import ProjectCard from '../components/ProjectCard';
 import TaskCard from '../components/TaskCard';
 
 const Projects = () => {
-  const { searchBar, setsearchBar } = useAppContext();
+  const { searchBar, setsearchBar ,currentColor } = useAppContext();
   const [openPage, setopenPage] = useState("projects");
   const projectsTeam = funcs.getAllTeam(projects);
 
@@ -77,15 +77,15 @@ const Projects = () => {
               {ranImg.map((i) => (
                 <div
                   key={i}
-                  className="not-first:-ml-3 size-9 p-0.5 rounded-full bg-gradient-to-br from-red-500 to-orange-500">
+                  className="not-first:-ml-3 size-9 rounded-full border-2 border-orange-500" style={{borderColor: currentColor}}>
                   <img
                     src={projectsTeam[i]}
                     className='size-full rounded-full  border-orange-500 object-cover'
-                    alt='team-member' />
+                    alt='team-member'/>
                 </div>
               ))}
               {projectsTeam.length > 4 ? (
-                <span className="size-9 grid place-items-center bg-orange-600 text-sm rounded-full -ml-3  text-white">
+                <span className="size-9 grid place-items-center bg-orange-600 text-sm rounded-full -ml-3  text-white" style={{background: currentColor}}>
                   +{projectsTeam.length - 4}
                 </span>
               ) : ("")
@@ -93,6 +93,7 @@ const Projects = () => {
             </div>
             <button
               className='hidden sm:flex items-center gap-1.5 px-4.5 py-1 rounded-sm bg-orange-500 text-white hover:bg-orange-700 cursor-pointer text-base whitespace-nowrap transition-all duration-200'
+              style={{background: currentColor}}
             >
               <FaUserPlus />
               <span>Invite</span>
@@ -110,13 +111,15 @@ const Projects = () => {
             <div className="flex items-center gap-1">
               <button
                 onClick={openProjects}
-                className={`px-4 py-1 border border-transparent transition-all duration-200 font-medium cursor-pointer text-slate-500 ${openPage === "projects" ? "bg-orange-500 text-white rounded-md border-orange-500 hover:text-orange-600 hover:bg-transparent hover:border-orange-500" : ""}`}
+                className={`px-4 py-1 border border-transparent transition-all duration-200 font-medium cursor-pointer text-slate-500 ${openPage === "projects" ? "bg-orange-500 text-white rounded-md border-orange-500 hover:opacity-90" : ""}`}
+                style={{background: openPage === "projects" ? currentColor : ""}}
               >
                 Projects
               </button>
               <button
                 onClick={openTasks}
-                className={`px-4 py-1 border border-transparent transition-all duration-200 font-medium cursor-pointer text-slate-500 ${openPage === "tasks" ? "bg-orange-500 text-white rounded-md border-orange-500 hover:text-orange-600 hover:bg-transparent hover:border-orange-500" : ""}`}
+                className={`px-4 py-1 border border-transparent transition-all duration-200 font-medium cursor-pointer text-slate-500 ${openPage === "tasks" ? "bg-orange-500 text-white rounded-md border-orange-500 hover:opacity-90" : ""}`}
+                style={{background: openPage === "tasks" ?currentColor : ""}}
               >
                 Tasks
               </button>
