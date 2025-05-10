@@ -1645,7 +1645,7 @@ export const colors = [
     cName: "Blue",
   },
   {
-    color: "#49c5b6",
+    color: "#33DEED",
     cName: "Cyan",
   },
   {
@@ -1663,6 +1663,10 @@ export const colors = [
   {
     color: "#e47297",
     cName: "Blush",
+  },
+  {
+    color: "#CB0302",
+    cName: "Red",
   },
 ];
 

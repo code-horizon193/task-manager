@@ -102,7 +102,7 @@ const Home = () => {
                 {tasks.map((item) => (
                   <div
                     key={item.id}
-                    className={`w-full flex items-center justify-between p-1.5 px-3 rounded-md cursor-pointer transition duration-200 hover:bg-slate-200 dark:hover:bg-slate-950 ${isChecked[item.id] ? "bg-purple-300 dark:bg-blue-900 rounded-none" : ""}` 
+                    className={`w-full flex items-center justify-between p-1.5 px-3 rounded-md cursor-pointer transition duration-200 hover:bg-slate-200 dark:hover:bg-slate-950 ${isChecked[item.id] ? "bg-orange-300/70 dark:bg-orange-900/70 rounded-none" : ""}` 
                     }
 
                     style={{
@@ -115,8 +115,11 @@ const Home = () => {
                         name="task"
                         id="task"
                         checked={!!isChecked[item.id]}
-                        className='size-4 accent-orange-500'
+                        className='size-4 accent-orange-400'
                         onChange={() => toggleCheck(item.id)}
+                        style={{
+                          accentColor: currentColor
+                        }}
                       />
                       <div className="ml-3">
                         <p className="text-sm font-semibold font-ubuntu">{item.title}</p>

@@ -8,6 +8,7 @@ import { FaCheck } from "react-icons/fa";
 import { checkboxItem, profileInfo, colors, myfavouriteMess } from '../data';
 import { CiEdit } from "react-icons/ci";
 import { useAppContext } from '../context/contextAPI';
+import { MdBorderColor } from 'react-icons/md';
 
 const Settings = () => {
   const { isGrid, setisGrid, currentColor, setcurrentColor } = useAppContext();
@@ -345,7 +346,8 @@ const Settings = () => {
 
               <div className="flex items-center gap-4 mt-3">
                 <div className="w-full md:w-sm">
-                  <div className={`grid grid-cols-2 gap-2.5 w-full p-6 bg-slate-200/60 dark:bg-slate-800/70 border-2 rounded-md ${isGrid ? "border-orange-500 ring-2 ring-orange-600" : "border-transparent"} transition-all duration-200 cursor-pointer`}
+                  <div 
+                    className={`grid grid-cols-2 gap-2.5 w-full p-6 bg-slate-200/60 dark:bg-slate-800/70 border-2 rounded-md ${isGrid ? "border-orange-500 ring-3 ring-orange-600" : "border-transparent"} transition-all duration-200 cursor-pointer`}
                     onClick={() => setisGrid(true)}
                   >
                     {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -357,7 +359,8 @@ const Settings = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-sm">
-                  <div className={`grid grid-cols-1 gap-2.5 w-full p-6 bg-slate-200/60 dark:bg-slate-800/70 rounded-md ${isGrid ? "border-transparent" : "border-orange-500 ring-2 ring-orange-600"} border-2 transition-all duration-200 cursor-pointer`}
+                  <div 
+                    className={`grid grid-cols-1 gap-2.5 w-full p-6 bg-slate-200/60 dark:bg-slate-800/70 rounded-md ${isGrid ? "border-transparent" : "border-orange-500 ring-3 ring-orange-600"} border-2 transition-all duration-200 cursor-pointer`}
                     onClick={() => setisGrid(false)}
                   >
                     {[1, 2, 3].map((i) => (

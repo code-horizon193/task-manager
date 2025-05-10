@@ -26,7 +26,7 @@ const SideBar = () => {
                     <div className="h-15">
                         <div className="size-full flex items-center px-2">
                             <Link to="/" className='flex items-center font-ubuntu'>
-                                <div className="grid place-items-center size-9 text-3xl text-orange-400">
+                                <div className="grid place-items-center size-9 text-3xl text-orange-400" style={{color: currentColor}}>
                                     <MdAddTask />
                                 </div>
                                 <span className='text-2xl font-bold text-gray-700 dark:text-slate-100'>Task-Tracker</span>
