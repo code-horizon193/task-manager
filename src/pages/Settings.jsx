@@ -46,13 +46,14 @@ const Settings = () => {
           <div className='my-5 flex flex-col items-center'>
             <div className="relative size-28 bg-amber-200 rounded-full">
               <img
-                src="public/users/user-13.jpg"
+                src={`${import.meta.env.BASE_URL}public/users/user-13.jpg`}
                 alt="profile img"
                 className='size-full rounded-full object-cover select-none'
               />
               <button
                 className='size-7 bg-amber-400 grid place-items-center rounded-full text-xl absolute right-1 -bottom-1 text-gray-800 hover:bg-amber-500 cursor-pointer'
                 onClick={openimgMenu}
+                style={{background: currentColor}}
               >
                 <CiEdit />
               </button>

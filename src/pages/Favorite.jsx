@@ -8,7 +8,7 @@ const Favorite = () => {
             <div class="py-5 px-4 mx-auto max-w-screen-xl lg:py-10 lg:px-6">
                 <div class="mx-auto max-w-screen-sm text-center">
                     <img
-                        src="public/error/no-result.svg"
+                        src={`${import.meta.env.BASE_URL}public/error/no-result.svg`}
                         alt="no data found"
                         className='h-72 w-full mb-3 animation'
                     />

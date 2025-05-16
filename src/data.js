@@ -69,17 +69,17 @@ export const projects = [
     priority: "Low",
     percent: 75,
     tags: ["Task", "photoShop"],
-    team: ["public/users/user-1.jpg", "public/users/user-2.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-1.jpg`, `${import.meta.env.BASE_URL}public/users/user-2.jpg`],
     fileSize: "2.2MB",
     comments: [
       {
-        img: "public/users/user-1.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-1.jpg`,
         name: "Jana Semison",
         position: "photoshop",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
       {
-        img: "public/users/user-2.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-2.jpg`,
         name: "Clarck Jopes",
         position: "graphic design",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -99,17 +99,17 @@ export const projects = [
     percent: 100,
     width: "w-[100%]",
     tags: ["Task", "design", "explore"],
-    team: ["public/users/user-3.jpg", "public/users/user-4.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-3.jpg`, `${import.meta.env.BASE_URL}public/users/user-4.jpg`],
     fileSize: "1.2MB",
     comments: [
       {
-        img: "public/users/profile.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/profile.jpg`,
         name: "Jonas Helper",
         position: "designer",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
       },
       {
-        img: "public/users/user-3.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-3.jpg`,
         name: "Jack Welson",
         position: "designer",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -129,11 +129,11 @@ export const projects = [
     percent: 49,
     width: "w-[49%]",
     tags: ["User", "comments", "feedback"],
-    team: ["public/users/user-5.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-5.jpg`],
     fileSize: "1.0MB",
     comments: [
       {
-        img: "public/users/user-5.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-5.jpg`,
         name: "Nick Woods",
         position: "customer serveces",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
@@ -153,11 +153,11 @@ export const projects = [
     percent: 81,
     width: "w-[81%]",
     tags: ["research", "analsyis"],
-    team: ["public/users/user-18.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-18.jpg`],
     fileSize: "5.1MB",
     comments: [
       {
-        img: "public/users/user-18.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-18.jpg`,
         name: "Wilson morety",
         position: "data scientest",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
@@ -178,26 +178,26 @@ export const projects = [
     width: "w-[38%]",
     tags: ["research", "web", "design"],
     team: [
-      "public/users/user-13.jpg",
-      "public/users/user-14.jpg",
-      "public/users/user-15.jpg",
+      `${import.meta.env.BASE_URL}public/users/user-13.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-14.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-15.jpg`,
     ],
     fileSize: "2.8MB",
     comments: [
       {
-        img: "public/users/user-13.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-13.jpg`,
         name: "Robert Nelson",
         position: "devolper",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
       },
       {
-        img: "public/users/user-14.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-14.jpg`,
         name: "Emma Stone",
         position: "designer",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
       },
       {
-        img: "public/users/user-15.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-15.jpg`,
         name: "Steven Chockley",
         position: "devolper",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
@@ -217,11 +217,11 @@ export const projects = [
     percent: 100,
     width: "w-[100%]",
     tags: ["managment"],
-    team: ["public/users/user-11.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-11.jpg`],
     fileSize: "10.8MB",
     comments: [
       {
-        img: "public/users/user-11.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-11.jpg`,
         name: "Watson Svalone",
         position: "Manager",
         Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
@@ -241,11 +241,11 @@ export const projects = [
     percent: 100,
     width: "w-[100%]",
     tags: ["agile", "retrospective"],
-    team: ["public/users/user-6.jpg", "public/users/user-7.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-6.jpg`, `${import.meta.env.BASE_URL}public/users/user-7.jpg`],
     fileSize: "3.0MB",
     comments: [
       {
-        img: "public/users/user-6.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-6.jpg`,
         name: "Nora Bright",
         position: "Scrum Master",
         Comment: "Great insights from this sprint retrospective!",
@@ -265,11 +265,11 @@ export const projects = [
     percent: 80,
     width: "w-[80%]",
     tags: ["backlog", "product"],
-    team: ["public/users/user-8.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-8.jpg`],
     fileSize: "4.4MB",
     comments: [
       {
-        img: "public/users/user-8.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-8.jpg`,
         name: "Alice Monroe",
         position: "Product Owner",
         Comment: "We’ve cleaned up most of the technical debt.",
@@ -289,11 +289,11 @@ export const projects = [
     percent: 62,
     width: "w-[62%]",
     tags: ["bugfix", "QA"],
-    team: ["public/users/user-9.jpg", "public/users/user-10.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-9.jpg`, `${import.meta.env.BASE_URL}public/users/user-10.jpg`],
     fileSize: "2.9MB",
     comments: [
       {
-        img: "public/users/user-9.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-9.jpg`,
         name: "Jordan Blake",
         position: "QA Engineer",
         Comment: "We're tackling the last set of critical bugs.",
@@ -313,11 +313,11 @@ export const projects = [
     percent: 43,
     width: "w-[43%]",
     tags: ["accessibility", "UI"],
-    team: ["public/users/user-12.jpg", "public/users/user-13.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-12.jpg`, `${import.meta.env.BASE_URL}public/users/user-13.jpg`],
     fileSize: "1.7MB",
     comments: [
       {
-        img: "public/users/user-12.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-12.jpg`,
         name: "Liam Cross",
         position: "Front-End Dev",
         Comment: "Screen reader support improved in latest build.",
@@ -337,11 +337,11 @@ export const projects = [
     percent: 52,
     width: "w-[52%]",
     tags: ["marketing", "web design"],
-    team: ["public/users/user-16.jpg", "public/users/user-17.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-16.jpg`, `${import.meta.env.BASE_URL}public/users/user-17.jpg`],
     fileSize: "3.3MB",
     comments: [
       {
-        img: "public/users/user-16.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-16.jpg`,
         name: "Angela Rivers",
         position: "Marketing Lead",
         Comment: "Working on copy and SEO now.",
@@ -361,11 +361,11 @@ export const projects = [
     percent: 15,
     width: "w-[15%]",
     tags: ["mobile", "responsive"],
-    team: ["public/users/user-19.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-19.jpg`],
     fileSize: "0.8MB",
     comments: [
       {
-        img: "public/users/user-19.jpg",
+        img: `${import.meta.env.BASE_URL}public/users/user-19.jpg`,
         name: "Mike Harlow",
         position: "Mobile QA",
         Comment: "Awaiting design specs before testing begins.",
@@ -377,7 +377,7 @@ export const projects = [
 export const notes = [
   {
     date: "27th April, 2021",
-    image: "public/notes/note-1.jpg",
+    image: `${import.meta.env.BASE_URL}public/notes/note-1.jpg`,
     title: "Plans for future and other directions, what needs to be done",
     description:
       "A Design Direction unifies everyone and adds meaning to web design. It’s a combination of art and...",
@@ -392,7 +392,7 @@ export const notes = [
   },
   {
     date: "27th April, 2021",
-    image: "public/notes/note-2.jpg",
+    image: `${import.meta.env.BASE_URL}public/notes/note-2.jpg`,
     title: "Design & devolpment challenges",
     description:
       "What is a Design Challenge? Design challenges help boost creativity, create positive habits, and teach new methods for design thinking.",
@@ -412,7 +412,7 @@ export const notes = [
   },
   {
     date: "27th April, 2021",
-    image: "public/notes/note-3.jpg",
+    image: `${import.meta.env.BASE_URL}public/notes/note-3.jpg`,
     title: "How to conduct a user interview that could improve your product?",
     description:
       "You cannot understand good design if you do not understand people; design is made for people. User interviews are a tool that can help you...",
@@ -431,7 +431,7 @@ export const notes = [
   },
   {
     date: "27th April, 2021",
-    image: "public/notes/note-4.jpg",
+    image: `${import.meta.env.BASE_URL}public/notes/note-4.jpg`,
     title: "Note B - Dribble strategy",
     description:
       "A plan focused on building a consistent design strategy, maintaining quality visuals, and boosting engagement on Dribbble platform.",
@@ -451,7 +451,7 @@ export const notes = [
   },
   {
     date: "28th April, 2021",
-    image: "public/notes/note-5.jpg",
+    image: `${import.meta.env.BASE_URL}public/notes/note-5.jpg`,
     title: "Optimizing team workflow and productivity",
     description:
       "Identifying bottlenecks and streamlining daily operations to enhance overall productivity. Key focus on tooling, meetings, and prioritization.",
@@ -466,7 +466,7 @@ export const notes = [
   },
   {
     date: "28th April, 2021",
-    image: "public/notes/note-6.jpg",
+    image: `${import.meta.env.BASE_URL}public/notes/note-6.jpg`,
     title: "Creating a consistent brand identity",
     description:
       "A strong brand identity is key to user trust. This note outlines typography, color schemes, and tone of voice used across the product.",
@@ -477,7 +477,7 @@ export const notes = [
   },
   {
     date: "28th April, 2021",
-    image: "public/notes/note-7.jpg",
+    image: `${import.meta.env.BASE_URL}public/notes/note-7.jpg`,
     title: "Frontend architecture planning",
     description:
       "Discusses strategies for scalable and maintainable frontend code, including folder structure, state management, and reusable components.",
@@ -488,7 +488,7 @@ export const notes = [
   },
   {
     date: "28th April, 2021",
-    image: "public/notes/note-8.jpg",
+    image: `${import.meta.env.BASE_URL}public/notes/note-8.jpg`,
     title: "Customer feedback loop improvement",
     description:
       "Establishing better systems to collect, analyze, and respond to customer feedback in a continuous product improvement cycle.",
@@ -536,31 +536,31 @@ export const activity = [
     user: "maya hayes",
     time: "27th April, 2025",
     position: "Design challenges",
-    image: "public/users/user-6.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-6.jpg`,
   },
   {
     user: "cassie melendez",
     time: "27th April, 2025",
     position: "Note B - Dribble strategy",
-    image: "public/users/user-7.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-7.jpg`,
   },
   {
     user: "ronny schultz",
     time: "27th April, 2025",
     position: "Note B - Dribble strategy",
-    image: "public/users/user-9.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-9.jpg`,
   },
   {
     user: "amanda finnegan",
     time: "27th April, 2025",
     position: "Meeting planning",
-    image: "public/users/user-8.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-8.jpg`,
   },
   {
     user: "roben houghton",
     time: "27th April, 2025",
     position: "Plans for future",
-    image: "public/users/user-10.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-10.jpg`,
   },
 ];
 
@@ -660,27 +660,27 @@ export const barTools = [
 export const myTeam = [
   {
     name: "James Hank",
-    image: "public/users/user-19.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-19.jpg`,
     position: "Team Leader",
   },
   {
     name: "Parlock Hevlon",
-    image: "public/users/user-7.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-7.jpg`,
     position: "Devolper",
   },
   {
     name: "Emaa Tom",
-    image: "public/users/user-17.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-17.jpg`,
     position: "UI UX Designer",
   },
   {
     name: "Evala Gray",
-    image: "public/users/user-16.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-16.jpg`,
     position: "React Champ",
   },
   {
     name: "Steven Stone",
-    image: "public/users/user-15.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-15.jpg`,
     position: "Sales Lead",
   },
 ];
@@ -688,7 +688,7 @@ export const myTeam = [
 export const table = [
   {
     app: "Alpino 4.1",
-    team: ["public/users/user-3.jpg", "public/users/user-16.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-3.jpg`, `${import.meta.env.BASE_URL}public/users/user-16.jpg`],
     sales: "11,580",
     price: "$80",
     total: "$22.899",
@@ -699,9 +699,9 @@ export const table = [
   {
     app: "Nexos",
     team: [
-      "public/users/user-7.jpg",
-      "public/users/user-13.jpg",
-      "public/users/user-18.jpg",
+      `${import.meta.env.BASE_URL}public/users/user-7.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-13.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-18.jpg`,
     ],
     sales: "18,000",
     price: "$120",
@@ -713,9 +713,9 @@ export const table = [
   {
     app: "Compass V3.4.1",
     team: [
-      "public/users/user-14.jpg",
-      "public/users/user-2.jpg",
-      "public/users/user-4.jpg",
+      `${import.meta.env.BASE_URL}public/users/user-14.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-2.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-4.jpg`,
     ],
     sales: "10,799",
     price: "$38",
@@ -726,7 +726,7 @@ export const table = [
   },
   {
     app: "Neterio",
-    team: ["public/users/user-15.jpg", "public/users/user-6.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-15.jpg`, `${import.meta.env.BASE_URL}public/users/user-6.jpg`],
     sales: "15,799",
     price: "$99",
     total: "$200.000",
@@ -736,7 +736,7 @@ export const table = [
   },
   {
     app: "Csero 3.4",
-    team: ["public/users/user-8.jpg", "public/users/user-12.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-8.jpg`, `${import.meta.env.BASE_URL}public/users/user-12.jpg`],
     sales: "150,799",
     price: "$59",
     total: "$299.000",
@@ -750,97 +750,97 @@ export const teamMember = [
   {
     name: "Ethan Harris",
     position: "Project Manager",
-    image: "public/users/user-11.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-11.jpg`,
     about: "Leads the team and ensures timely project delivery with quality.",
   },
   {
     name: "Emily Stone",
     position: "Frontend Developer",
-    image: "public/users/user-2.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-2.jpg`,
     about: "Builds responsive user interfaces with a focus on performance.",
   },
   {
     name: "Daniel Kim",
     position: "Backend Developer",
-    image: "public/users/user-3.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-3.jpg`,
     about: "Handles server-side logic and database integration.",
   },
   {
     name: "James Carter",
     position: "UI/UX Designer",
-    image: "public/users/user-4.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-4.jpg`,
     about: "Designs user-friendly interfaces and improves user experiences.",
   },
   {
     name: "Michael Scott",
     position: "QA Engineer",
-    image: "public/users/user-5.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-5.jpg`,
     about: "Tests features and ensures bug-free releases.",
   },
   {
     name: "Olivia Davis",
     position: "Business Analyst",
-    image: "public/users/user-6.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-6.jpg`,
     about: "Bridges communication between stakeholders and dev team.",
   },
   {
     name: "Robert Brown",
     position: "DevOps Engineer",
-    image: "public/users/user-7.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-7.jpg`,
     about: "Manages CI/CD pipelines and cloud infrastructure.",
   },
   {
     name: "Isabella Garcia",
     position: "Product Owner",
-    image: "public/users/user-8.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-8.jpg`,
     about: "Defines product vision and prioritizes feature backlog.",
   },
   {
     name: "William Lee",
     position: "Support Specialist",
-    image: "public/users/user-9.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-9.jpg`,
     about: "Helps clients with technical issues and feedback.",
   },
   {
     name: "Ava Wilson",
     position: "Scrum Master",
-    image: "public/users/user-10.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-10.jpg`,
     about: "Facilitates agile processes and removes team blockers.",
   },
   {
     name: "Sophia Nguyen",
     position: "Mobile Developer",
-    image: "public/users/user-1.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-1.jpg`,
     about: "Develops and maintains mobile applications for iOS and Android.",
   },
   {
     name: "Mia Martinez",
     position: "Content Strategist",
-    image: "public/users/user-12.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-12.jpg`,
     about: "Plans and manages content to support product goals.",
   },
   {
     name: "Alexander Walker",
     position: "Security Engineer",
-    image: "public/users/user-13.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-13.jpg`,
     about: "Ensures application security and monitors threats.",
   },
   {
     name: "Charlotte Young",
     position: "Marketing Lead",
-    image: "public/users/user-14.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-14.jpg`,
     about: "Leads marketing campaigns and engagement strategies.",
   },
   {
     name: "Benjamin Allen",
     position: "Data Analyst",
-    image: "public/users/user-15.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-15.jpg`,
     about: "Analyzes data to guide product and business decisions.",
   },
   {
     name: "Amelia King",
     position: "HR Coordinator",
-    image: "public/users/user-16.jpg",
+    image: `${import.meta.env.BASE_URL}public/users/user-16.jpg`,
     about: "Supports HR processes and team coordination.",
   },
 ];
@@ -896,10 +896,10 @@ export const tasksList = [
     priority: "high",
     percent: 50,
     team: [
-      "public/users/user-18.jpg",
-      "public/users/user-14.jpg",
-      "public/users/user-2.jpg",
-      "public/users/user-7.jpg",
+      `${import.meta.env.BASE_URL}public/users/user-18.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-14.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-2.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-7.jpg`,
     ],
     report: "not completed",
     commits: [
@@ -934,7 +934,7 @@ export const tasksList = [
     status: "completed",
     priority: "low",
     percent: 100,
-    team: ["public/users/user-11.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-11.jpg`],
     report: "completed",
     commits: [
       {
@@ -999,10 +999,10 @@ export const tasksList = [
     priority: "medium",
     percent: 50,
     team: [
-      "public/users/user-6.jpg",
-      "public/users/user-9.jpg",
-      "public/users/user-15.jpg",
-      "public/users/user-4.jpg",
+      `${import.meta.env.BASE_URL}public/users/user-6.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-9.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-15.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-4.jpg`,
     ],
     report: "not completed",
     commits: [
@@ -1030,7 +1030,7 @@ export const tasksList = [
     status: "completed",
     priority: "low",
     percent: 100,
-    team: ["public/users/user-8.jpg", "public/users/user-2.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-8.jpg`, `${import.meta.env.BASE_URL}public/users/user-2.jpg`],
     report: "completed",
     commits: [
       {
@@ -1081,7 +1081,7 @@ export const tasksList = [
     status: "completed",
     priority: "medium",
     percent: 100,
-    team: ["public/users/user-3.jpg", "public/users/user-17.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-3.jpg`, `${import.meta.env.BASE_URL}public/users/user-17.jpg`],
     report: "completed",
     commits: [
       {
@@ -1157,9 +1157,9 @@ export const tasksList = [
     priority: "medium",
     percent: 75,
     team: [
-      "public/users/user-17.jpg",
-      "public/users/user-3.jpg",
-      "public/users/user-2.jpg",
+      `${import.meta.env.BASE_URL}public/users/user-17.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-3.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-2.jpg`,
     ],
     report: "not completed",
     commits: [
@@ -1188,9 +1188,9 @@ export const tasksList = [
     priority: "high",
     percent: 50,
     team: [
-      "public/users/user-8.jpg",
-      "public/users/user-2.jpg",
-      "public/users/user-15.jpg",
+      `${import.meta.env.BASE_URL}public/users/user-8.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-2.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-15.jpg`,
     ],
     report: "not completed",
     commits: [
@@ -1219,10 +1219,10 @@ export const tasksList = [
     priority: "high",
     percent: 100,
     team: [
-      "public/users/user-10.jpg",
-      "public/users/user-5.jpg",
-      "public/users/user-1.jpg",
-      "public/users/user-2.jpg",
+      `${import.meta.env.BASE_URL}public/users/user-10.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-5.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-1.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-2.jpg`,
     ],
     report: "completed",
     commits: [
@@ -1298,7 +1298,7 @@ export const tasksList = [
     status: "in progress",
     priority: "high",
     percent: 50,
-    team: ["public/users/user-2.jpg", "public/users/user-1.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-2.jpg`, `${import.meta.env.BASE_URL}public/users/user-1.jpg`],
     report: "not completed",
     commits: [
       {
@@ -1320,10 +1320,10 @@ export const tasksList = [
     priority: "medium",
     percent: 50,
     team: [
-      "public/users/user-17.jpg",
-      "public/users/user-1.jpg",
-      "public/users/user-10.jpg",
-      "public/users/user-13.jpg",
+      `${import.meta.env.BASE_URL}public/users/user-17.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-1.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-10.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-13.jpg`,
     ],
     report: "not completed",
     commits: [
@@ -1351,7 +1351,7 @@ export const tasksList = [
     status: "not started",
     priority: "low",
     percent: 25,
-    team: ["public/users/user-7.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-7.jpg`],
     report: "not completed",
     commits: [
       {
@@ -1385,10 +1385,10 @@ export const tasksList = [
     priority: "high",
     percent: 75,
     team: [
-      "public/users/user-6.jpg",
-      "public/users/user-8.jpg",
-      "public/users/user-13.jpg",
-      "public/users/user-10.jpg",
+      `${import.meta.env.BASE_URL}public/users/user-6.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-8.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-13.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-10.jpg`,
     ],
     report: "not completed",
     commits: [
@@ -1410,7 +1410,7 @@ export const tasksList = [
     status: "completed",
     priority: "medium",
     percent: 100,
-    team: ["public/users/user-14.jpg", "public/users/user-15.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-14.jpg`, `${import.meta.env.BASE_URL}public/users/user-15.jpg`],
     report: "completed",
     commits: [
       {
@@ -1486,10 +1486,10 @@ export const tasksList = [
     priority: "low",
     percent: 75,
     team: [
-      "public/users/user-9.jpg",
-      "public/users/user-10.jpg",
-      "public/users/user-11.jpg",
-      "public/users/user-1.jpg",
+      `${import.meta.env.BASE_URL}public/users/user-9.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-10.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-11.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-1.jpg`,
     ],
     report: "not completed",
     commits: [
@@ -1523,7 +1523,7 @@ export const tasksList = [
     status: "not started",
     priority: "low",
     percent: 75,
-    team: ["public/users/user-6.jpg", "public/users/user-11.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-6.jpg`, `${import.meta.env.BASE_URL}public/users/user-11.jpg`],
     report: "not completed",
     commits: [
       {
@@ -1562,7 +1562,7 @@ export const tasksList = [
     status: "in progress",
     priority: "medium",
     percent: 0,
-    team: ["public/users/user-10.jpg", "public/users/user-4.jpg"],
+    team: [`${import.meta.env.BASE_URL}public/users/user-10.jpg`, `${import.meta.env.BASE_URL}public/users/user-4.jpg`],
     report: "not completed",
     commits: [
       {
@@ -1665,7 +1665,7 @@ export const colors = [
     cName: "Blush",
   },
   {
-    color: "#CB0302",
+    color: "#ea221f",
     cName: "Red",
   },
 ];
