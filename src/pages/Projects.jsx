@@ -13,9 +13,14 @@ import { useAppContext } from '../context/contextAPI';
 import { FiMoreHorizontal } from "react-icons/fi";
 import ProjectCard from '../components/ProjectCard';
 import TaskCard from '../components/TaskCard';
+import TaskDetails from '../components/TaskDetails';
+import ProjectDetails from '../components/ProjectDetails';
+
+
 
 const Projects = () => {
-  const { searchBar, setsearchBar ,currentColor } = useAppContext();
+  const { searchBar, setsearchBar, currentColor, openDetail, taskDetail, projectDetail, openProject } = useAppContext();
+
   const [openPage, setopenPage] = useState("projects");
   const projectsTeam = funcs.getAllTeam(projects);
 
@@ -61,6 +66,13 @@ const Projects = () => {
 
   return (
     <div className='page relative'>
+      {openDetail && (
+        <TaskDetails task={taskDetail} />
+      )}
+
+      {openProject && (
+        <ProjectDetails project={projectDetail} />
+      )}
       <div className="p-3">
         <div className="flex items-center justify-between">
           <div className="text-start">
@@ -77,15 +89,15 @@ const Projects = () => {
               {ranImg.map((i) => (
                 <div
                   key={i}
-                  className="not-first:-ml-3 size-9 rounded-full border-2 border-orange-500" style={{borderColor: currentColor}}>
+                  className="not-first:-ml-3 size-9 rounded-full border-2 border-orange-500" style={{ borderColor: currentColor }}>
                   <img
                     src={projectsTeam[i]}
                     className='size-full rounded-full  border-orange-500 object-cover'
-                    alt='team-member'/>
+                    alt='team-member' />
                 </div>
               ))}
               {projectsTeam.length > 4 ? (
-                <span className="size-9 grid place-items-center bg-orange-600 text-sm rounded-full -ml-3  text-white" style={{background: currentColor}}>
+                <span className="size-9 grid place-items-center bg-orange-600 text-sm rounded-full -ml-3  text-white" style={{ background: currentColor }}>
                   +{projectsTeam.length - 4}
                 </span>
               ) : ("")
@@ -93,7 +105,7 @@ const Projects = () => {
             </div>
             <button
               className='hidden sm:flex items-center gap-1.5 px-4.5 py-1 rounded-sm bg-orange-500 text-white hover:bg-orange-700 cursor-pointer text-base whitespace-nowrap transition-all duration-200'
-              style={{background: currentColor}}
+              style={{ background: currentColor }}
             >
               <FaUserPlus />
               <span>Invite</span>
@@ -112,14 +124,14 @@ const Projects = () => {
               <button
                 onClick={openProjects}
                 className={`px-4 py-1 border border-transparent transition-all duration-200 font-medium cursor-pointer text-slate-500 ${openPage === "projects" ? "bg-orange-500 text-white rounded-md border-orange-500 hover:opacity-90" : ""}`}
-                style={{background: openPage === "projects" ? currentColor : ""}}
+                style={{ background: openPage === "projects" ? currentColor : "" }}
               >
                 Projects
               </button>
               <button
                 onClick={openTasks}
                 className={`px-4 py-1 border border-transparent transition-all duration-200 font-medium cursor-pointer text-slate-500 ${openPage === "tasks" ? "bg-orange-500 text-white rounded-md border-orange-500 hover:opacity-90" : ""}`}
-                style={{background: openPage === "tasks" ?currentColor : ""}}
+                style={{ background: openPage === "tasks" ? currentColor : "" }}
               >
                 Tasks
               </button>
@@ -166,8 +178,8 @@ const Projects = () => {
           <SearchBar />
         ) : ("")}
 
-        <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 items-start">
-          <div className="p-3 bg-blue-50 dark:bg-blue-900/40 border rounded-md border-blue-200 dark:border-blue-900">
+        <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 items-baseline">
+          <div className="p-3 bg-blue-50 dark:bg-blue-900/40 border rounded-md border-blue-200 dark:border-blue-900 h-auto">
             <div className="flex items-center justify-between px-3 py-1 bg-blue-400/30 dark:bg-blue-200 rounded-md">
               <p className="text-blue-800 font-semibold font-ubuntu relative px-3 before:absolute before:size-2 before:rounded-full before:bg-blue-700 before:left-0 before:top-1/2 before:-translate-y-1/2">
                 High
@@ -194,7 +206,7 @@ const Projects = () => {
               }
             </div>
           </div>
-          <div className="p-3 bg-green-50 dark:bg-green-900/40 border rounded-md border-green-200 dark:border-green-900">
+          <div className="p-3 bg-green-50 dark:bg-green-900/40 border rounded-md border-green-200 dark:border-green-900 h-auto">
             <div className="flex items-center justify-between px-3 py-1 bg-green-400/30 dark:bg-green-200 rounded-md">
               <p className="text-green-800 font-semibold font-ubuntu relative px-3 before:absolute before:size-2 before:rounded-full before:bg-green-700 before:left-0 before:top-1/2 before:-translate-y-1/2">
                 Medium
@@ -221,7 +233,7 @@ const Projects = () => {
               }
             </div>
           </div>
-          <div className="p-3 bg-red-50 dark:bg-red-900/40 border rounded-md border-red-200 dark:border-red-900">
+          <div className="p-3 bg-red-50 dark:bg-red-900/40 border rounded-md border-red-200 dark:border-red-900 h-auto">
             <div className="flex items-center justify-between px-3 py-1 bg-red-400/30 dark:bg-red-200 rounded-md">
               <p className="text-red-800 font-semibold font-ubuntu relative px-3 before:absolute before:size-2 before:rounded-full before:bg-red-700 before:left-0 before:top-1/2 before:-translate-y-1/2">
                 Low

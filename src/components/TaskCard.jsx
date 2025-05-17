@@ -4,8 +4,10 @@ import { IoPricetagsSharp } from "react-icons/io5";
 import { MdOutlineDateRange } from "react-icons/md";
 import { LuCircleDotDashed } from "react-icons/lu";
 import { FiGitCommit } from "react-icons/fi";
+import { useAppContext } from '../context/contextAPI';
 
 const TaskCard = ({ task }) => {
+    const { settaskDetail, setopenDetail } = useAppContext();
     let color;
     let state;
     switch (task.priority) {
@@ -32,8 +34,16 @@ const TaskCard = ({ task }) => {
             break
     }
 
+    const handleDetailShow = (taskCard) => {
+        setopenDetail(true);
+        settaskDetail(taskCard)
+    };
+
     return (
-        <div className="p-2 bg-white rounded-md dark:bg-darkmode transition duration-200 border border-slate-300 dark:border-slate-700 relative">
+        <div
+            className="p-2 bg-white rounded-md dark:bg-darkmode transition duration-200 border border-slate-300 dark:border-slate-700 relative"
+            onClick={() => handleDetailShow(task)}
+        >
             <div className="mb-4">
                 <div className={`flex items-center gap-1.5 ${color} w-fit px-3 py-1 rounded-full font-semibold text-sm mb-1 capitalize`}>
                     <IoPricetagsSharp />

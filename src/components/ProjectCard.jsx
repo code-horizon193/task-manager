@@ -2,7 +2,11 @@ import React from 'react';
 import { useAppContext } from '../context/contextAPI';
 
 const ProjectCard = ({ item }) => {
-    const { currentColor } = useAppContext();
+    const { currentColor, setprojectDetail, setopenProject } = useAppContext();
+    const handleDetailShow = (projectCard) => {
+        setopenProject(true);
+        setprojectDetail(projectCard)
+    };
     let color;
     switch (item.priority) {
         case "Low":
@@ -16,7 +20,10 @@ const ProjectCard = ({ item }) => {
             break;
     };
     return (
-        <div className={`p-2 bg-white rounded-md dark:bg-darkmode transition duration-200 border border-slate-300 dark:border-slate-700 relative before:absolute before:w-10/12 before:py-1 before:top-0 hover:before:-top-1.5 before:transition-all before:duration-200 before:left-1/2 before:-translate-x-1/2 before:bg-orange-500 before:opacity-50 hover:before:opacity-100 before:-z-[1] before:rounded-t-full`}>
+        <div
+            className={`p-2 bg-white rounded-md dark:bg-darkmode transition duration-200 border border-slate-300 dark:border-slate-700 relative before:absolute before:w-10/12 before:py-1 before:top-0 hover:before:-top-1.5 before:transition-all before:duration-200 before:left-1/2 before:-translate-x-1/2 before:bg-orange-500 before:opacity-50 hover:before:opacity-100 before:-z-[1] before:rounded-t-full`}
+            onClick={() => handleDetailShow(item)}
+        >
             <div className="mb-4">
                 <h4 className="text-lg font-semibold font-ubuntu text-slate-700 dark:text-slate-200">
                     {item.title}
@@ -44,7 +51,7 @@ const ProjectCard = ({ item }) => {
                             key={idx}
                             src={item}
                             alt="team member"
-                            className='size-9 rounded-full object-cover not-first:-ml-3 border-slate-700 border-2 dark:border-slate-200' style={{borderColor: currentColor}}
+                            className='size-9 rounded-full object-cover not-first:-ml-3 border-slate-700 border-2 dark:border-slate-200' style={{ borderColor: currentColor }}
                         />
                     ))}
                 </div>

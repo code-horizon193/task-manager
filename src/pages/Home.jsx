@@ -45,7 +45,7 @@ const Home = () => {
 
   return (
     <div className='page'>
-      <div className="flex w-full items-start gap-3 flex-col md:flex-row">
+      <div className="flex w-full items-start gap-3 flex-col lg:flex-row">
         <section className="md:flex-4 p-2 w-full">
 
           <div className="mb-5 border border-slate-300 rounded-lg bg-slate-50 p-2 shadow-md dark:bg-slate-900 dark:border-slate-700">
@@ -88,8 +88,8 @@ const Home = () => {
           </div>
 
         </section>
-        <section className="md:flex-2 p-2 w-full">
-          <div className="w-full flex gap-3 md:flex-col sm:flex-row flex-col">
+        <section className="lg:flex-2 p-2 w-full">
+          <div className="w-full flex gap-3 lg:flex-col sm:flex-row flex-col items-baseline">
 
             <div className="border w-full border-slate-300 rounded-lg bg-slate-50 p-2 shadow-md dark:bg-slate-900 dark:border-slate-700">
 

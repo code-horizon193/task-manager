@@ -69,20 +69,24 @@ export const projects = [
     priority: "Low",
     percent: 75,
     tags: ["Task", "photoShop"],
-    team: [`${import.meta.env.BASE_URL}public/users/user-1.jpg`, `${import.meta.env.BASE_URL}public/users/user-2.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-1.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-2.jpg`,
+    ],
     fileSize: "2.2MB",
     comments: [
       {
         img: `${import.meta.env.BASE_URL}public/users/user-1.jpg`,
         name: "Jana Semison",
         position: "photoshop",
-        Comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        Comment:
+          "Loving the ideas coming through this session! 🎨✨ Keep them flowing!",
       },
       {
         img: `${import.meta.env.BASE_URL}public/users/user-2.jpg`,
         name: "Clarck Jopes",
         position: "graphic design",
-        Comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        Comment: "Great momentum so far 💪 Let’s wrap up this phase strong!",
       },
     ],
   },
@@ -99,20 +103,24 @@ export const projects = [
     percent: 100,
     width: "w-[100%]",
     tags: ["Task", "design", "explore"],
-    team: [`${import.meta.env.BASE_URL}public/users/user-3.jpg`, `${import.meta.env.BASE_URL}public/users/user-4.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-3.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-4.jpg`,
+    ],
     fileSize: "1.2MB",
     comments: [
       {
         img: `${import.meta.env.BASE_URL}public/users/profile.jpg`,
         name: "Jonas Helper",
         position: "designer",
-        Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
+        Comment: "Final output looks amazing! 🎉 So proud of the result 💯",
       },
       {
         img: `${import.meta.env.BASE_URL}public/users/user-3.jpg`,
         name: "Jack Welson",
         position: "designer",
-        Comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        Comment:
+          "Smooth process from start to finish 👌 Let’s document the learnings 📒",
       },
     ],
   },
@@ -124,7 +132,7 @@ export const projects = [
     startDate: "2th May,2021",
     endDate: "10th May,2021",
     color: "bg-orange-500",
-    statues: "On Track",
+    statues: "on track",
     priority: "Low",
     percent: 49,
     width: "w-[49%]",
@@ -136,7 +144,8 @@ export const projects = [
         img: `${import.meta.env.BASE_URL}public/users/user-5.jpg`,
         name: "Nick Woods",
         position: "customer serveces",
-        Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
+        Comment:
+          "Users are engaging well! 💬 Let’s refine the next steps based on key insights 🔍",
       },
     ],
   },
@@ -148,7 +157,7 @@ export const projects = [
     startDate: "1st Jun,2022",
     endDate: "28th Jun,2022",
     color: "bg-red-500",
-    statues: "On Research",
+    statues: "on research",
     priority: "High",
     percent: 81,
     width: "w-[81%]",
@@ -160,7 +169,8 @@ export const projects = [
         img: `${import.meta.env.BASE_URL}public/users/user-18.jpg`,
         name: "Wilson morety",
         position: "data scientest",
-        Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
+        Comment:
+          "Interesting findings so far 🧪 Let's deep dive into anomalies 📊🔎",
       },
     ],
   },
@@ -172,7 +182,7 @@ export const projects = [
     startDate: "1st Jun,2022",
     endDate: "17th Jun,2022",
     color: "bg-sky-500",
-    statues: "On Research",
+    statues: "on research",
     priority: "High",
     percent: 38,
     width: "w-[38%]",
@@ -188,19 +198,22 @@ export const projects = [
         img: `${import.meta.env.BASE_URL}public/users/user-13.jpg`,
         name: "Robert Nelson",
         position: "devolper",
-        Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
+        Comment:
+          "Codebase is shaping up well 👨‍💻 Let's refactor modules next 🛠️",
       },
       {
         img: `${import.meta.env.BASE_URL}public/users/user-14.jpg`,
         name: "Emma Stone",
         position: "designer",
-        Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
+        Comment:
+          "UI elements are looking slick 😍 Still need to polish a few components 🧽",
       },
       {
         img: `${import.meta.env.BASE_URL}public/users/user-15.jpg`,
         name: "Steven Chockley",
         position: "devolper",
-        Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
+        Comment:
+          "Backend integrations are halfway done 🔌 Hoping to wrap up soon ✅",
       },
     ],
   },
@@ -212,7 +225,7 @@ export const projects = [
     startDate: "5st Octoper,2022",
     endDate: "20th Octoper,2022",
     color: "bg-stone-500",
-    statues: "Compeleted",
+    statues: "compelete",
     priority: "Medium",
     percent: 100,
     width: "w-[100%]",
@@ -224,7 +237,8 @@ export const projects = [
         img: `${import.meta.env.BASE_URL}public/users/user-11.jpg`,
         name: "Watson Svalone",
         position: "Manager",
-        Comment: "Lorem ipsum dolor sit amet consectetur adipisicing ",
+        Comment:
+          "Solid execution from everyone 👏 Let’s prepare a full report 📝✅",
       },
     ],
   },
@@ -236,12 +250,15 @@ export const projects = [
     startDate: "12th July,2022",
     endDate: "14th July,2022",
     color: "bg-yellow-500",
-    statues: "Completed",
+    statues: "complete",
     priority: "Medium",
     percent: 100,
     width: "w-[100%]",
     tags: ["agile", "retrospective"],
-    team: [`${import.meta.env.BASE_URL}public/users/user-6.jpg`, `${import.meta.env.BASE_URL}public/users/user-7.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-6.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-7.jpg`,
+    ],
     fileSize: "3.0MB",
     comments: [
       {
@@ -260,7 +277,7 @@ export const projects = [
     startDate: "3rd Aug,2022",
     endDate: "10th Aug,2022",
     color: "bg-fuchsia-500",
-    statues: "On Track",
+    statues: "on track",
     priority: "High",
     percent: 80,
     width: "w-[80%]",
@@ -284,12 +301,15 @@ export const projects = [
     startDate: "15th Aug,2022",
     endDate: "25th Aug,2022",
     color: "bg-rose-600",
-    statues: "On Track",
+    statues: "on track",
     priority: "High",
     percent: 62,
     width: "w-[62%]",
     tags: ["bugfix", "QA"],
-    team: [`${import.meta.env.BASE_URL}public/users/user-9.jpg`, `${import.meta.env.BASE_URL}public/users/user-10.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-9.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-10.jpg`,
+    ],
     fileSize: "2.9MB",
     comments: [
       {
@@ -308,12 +328,15 @@ export const projects = [
     startDate: "5th Sep,2022",
     endDate: "12th Sep,2022",
     color: "bg-blue-800",
-    statues: "On Research",
+    statues: "on research",
     priority: "Medium",
     percent: 43,
     width: "w-[43%]",
     tags: ["accessibility", "UI"],
-    team: [`${import.meta.env.BASE_URL}public/users/user-12.jpg`, `${import.meta.env.BASE_URL}public/users/user-13.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-12.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-13.jpg`,
+    ],
     fileSize: "1.7MB",
     comments: [
       {
@@ -332,12 +355,15 @@ export const projects = [
     startDate: "22nd Sep,2022",
     endDate: "30th Sep,2022",
     color: "bg-pink-500",
-    statues: "In Progress",
+    statues: "in progress",
     priority: "High",
     percent: 52,
     width: "w-[52%]",
     tags: ["marketing", "web design"],
-    team: [`${import.meta.env.BASE_URL}public/users/user-16.jpg`, `${import.meta.env.BASE_URL}public/users/user-17.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-16.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-17.jpg`,
+    ],
     fileSize: "3.3MB",
     comments: [
       {
@@ -356,7 +382,7 @@ export const projects = [
     startDate: "3rd Oct,2022",
     endDate: "10th Oct,2022",
     color: "bg-lime-500",
-    statues: "Pending",
+    statues: "pending",
     priority: "Low",
     percent: 15,
     width: "w-[15%]",
@@ -688,7 +714,10 @@ export const myTeam = [
 export const table = [
   {
     app: "Alpino 4.1",
-    team: [`${import.meta.env.BASE_URL}public/users/user-3.jpg`, `${import.meta.env.BASE_URL}public/users/user-16.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-3.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-16.jpg`,
+    ],
     sales: "11,580",
     price: "$80",
     total: "$22.899",
@@ -726,7 +755,10 @@ export const table = [
   },
   {
     app: "Neterio",
-    team: [`${import.meta.env.BASE_URL}public/users/user-15.jpg`, `${import.meta.env.BASE_URL}public/users/user-6.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-15.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-6.jpg`,
+    ],
     sales: "15,799",
     price: "$99",
     total: "$200.000",
@@ -736,7 +768,10 @@ export const table = [
   },
   {
     app: "Csero 3.4",
-    team: [`${import.meta.env.BASE_URL}public/users/user-8.jpg`, `${import.meta.env.BASE_URL}public/users/user-12.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-8.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-12.jpg`,
+    ],
     sales: "150,799",
     price: "$59",
     total: "$299.000",
@@ -1030,7 +1065,10 @@ export const tasksList = [
     status: "completed",
     priority: "low",
     percent: 100,
-    team: [`${import.meta.env.BASE_URL}public/users/user-8.jpg`, `${import.meta.env.BASE_URL}public/users/user-2.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-8.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-2.jpg`,
+    ],
     report: "completed",
     commits: [
       {
@@ -1081,7 +1119,10 @@ export const tasksList = [
     status: "completed",
     priority: "medium",
     percent: 100,
-    team: [`${import.meta.env.BASE_URL}public/users/user-3.jpg`, `${import.meta.env.BASE_URL}public/users/user-17.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-3.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-17.jpg`,
+    ],
     report: "completed",
     commits: [
       {
@@ -1298,7 +1339,10 @@ export const tasksList = [
     status: "in progress",
     priority: "high",
     percent: 50,
-    team: [`${import.meta.env.BASE_URL}public/users/user-2.jpg`, `${import.meta.env.BASE_URL}public/users/user-1.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-2.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-1.jpg`,
+    ],
     report: "not completed",
     commits: [
       {
@@ -1410,7 +1454,10 @@ export const tasksList = [
     status: "completed",
     priority: "medium",
     percent: 100,
-    team: [`${import.meta.env.BASE_URL}public/users/user-14.jpg`, `${import.meta.env.BASE_URL}public/users/user-15.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-14.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-15.jpg`,
+    ],
     report: "completed",
     commits: [
       {
@@ -1523,7 +1570,10 @@ export const tasksList = [
     status: "not started",
     priority: "low",
     percent: 75,
-    team: [`${import.meta.env.BASE_URL}public/users/user-6.jpg`, `${import.meta.env.BASE_URL}public/users/user-11.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-6.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-11.jpg`,
+    ],
     report: "not completed",
     commits: [
       {
@@ -1562,7 +1612,10 @@ export const tasksList = [
     status: "in progress",
     priority: "medium",
     percent: 0,
-    team: [`${import.meta.env.BASE_URL}public/users/user-10.jpg`, `${import.meta.env.BASE_URL}public/users/user-4.jpg`],
+    team: [
+      `${import.meta.env.BASE_URL}public/users/user-10.jpg`,
+      `${import.meta.env.BASE_URL}public/users/user-4.jpg`,
+    ],
     report: "not completed",
     commits: [
       {
