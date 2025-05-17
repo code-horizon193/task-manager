@@ -250,7 +250,7 @@ const ProjectDetails = ({ project }) => {
                                             <p
                                                 className="text-xs text-orange-500 -mt-0.5 capitalize"
                                                 style={{
-                                                    background: currentColor
+                                                    color: currentColor
                                                 }}
                                             >
                                                 @{comment.position}
